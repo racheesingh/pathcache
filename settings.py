@@ -1,3 +1,4 @@
+GRAPH_DIR_FINAL = "graphs/complete/"
 GRAPH_DIR_RIPE = "graphs/ripe/"
 GRAPH_DIR_IPLANE = "graphs/iplane/"
 GRAPH_DIR_BGP = "graphs/bgp/"

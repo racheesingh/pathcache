@@ -50,6 +50,9 @@ def build_bgp_graph(project=None, collector=None):
                 loopCount += 1
                 elem = rec.get_next_elem()
                 continue
+            if '{' in elem.fields['as-path']:
+                elem = rec.get_next_elem()
+                continue
             if len(hops) > 1 and hops[0] == peer:
                 # Get the origin ASN, is the destination for traffic
                 # toward this prefix
@@ -95,5 +98,3 @@ for asn, gr in bgp_graphs.iteritems():
             f.write( s )
     except:
         pdb.set_trace()
-
-pdb.set_trace()

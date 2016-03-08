@@ -54,7 +54,7 @@ def parse_caida_json_streaming(fname):
                             link_type = 'd'
                         else:
                             link_type = 'i'
-                        link = (last_hop_asn, this_hop_asn, link_type)
+                        link = (int(last_hop_asn), int(this_hop_asn), link_type)
                         aslinks.append(link)
             if aslinks:
                 dest_based_aspaths[dst_asn].append(aslinks)
@@ -99,4 +99,3 @@ for asn, gr in dest_based_graphs_overall.iteritems():
         pdb.set_trace()
 
 print "total edges %d" % sum(edges)
-pdb.set_trace()

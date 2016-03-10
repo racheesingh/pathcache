@@ -145,10 +145,6 @@ for f in files:
             else:
                 new_edge = gr_asn.add_edge(new_src, new_dst)
                 gr_asn.ep.conf[new_edge] = 1
-                if edge[2]['type'] == 'i':
-                    gr_asn.ep.type[new_edge] = 1
-                else:
-                    gr_asn.ep.type[new_edge] = 0
                 gr_asn.ep.source[new_edge] = IPLANE
         except OverflowError:
             continue
@@ -205,10 +201,6 @@ for f in files:
             else:
                 new_edge = gr_asn.add_edge(new_src, new_dst)
                 gr_asn.ep.conf[new_edge] = 1
-                if edge[2]['type'] == 'i':
-                    gr_asn.ep.type[new_edge] = 1
-                else:
-                    gr_asn.ep.type[new_edge] = 0
                 gr_asn.ep.source[new_edge] = BGP
         except OverflowError:
             continue

@@ -1,29 +1,26 @@
 #!/usr/bin/python
+import os
 from graph_tool.all import *
 import mkit.inference.ip_to_asn as ip2asn
 import mkit.inference.ixp as ixp
 import mkit.ripeatlas.parse as parse
 import mkit.inference.ippath_to_aspath as asp
 import settings
-from networkx.readwrite import json_graph
 import sys
 import traceback
-import pickle
-import pygeoip
 import multiprocessing as mp
-import networkx as nx
 import urllib2
 import json
 import pdb
 import urllib
 import datetime
 import time
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 import logging
+import multiprocessing
+logger = multiprocessing.log_to_stderr()
+logger.setLevel(logging.INFO)
+logger.setLevel(multiprocessing.SUBDEBUG)
 
-settings.GRAPH_DIR = settings.GRAPH_DIR_RIPE
 now = '-'.join( str( datetime.datetime.now() ).split() )
 
 def are_siblings( as1, as2 ):
@@ -35,9 +32,21 @@ def are_siblings( as1, as2 ):
 
 with open(settings.RIPE_MSMS) as fi:
     msms = json.load(fi)
-msms = list(frozenset(msms))
+msms_all = list(frozenset(msms))
 
 def compute_dest_based_graphs(msms):
+    def graph_on_disk(dst_asn):
+        files = [ x for x in os.listdir( settings.GRAPH_DIR_RIPE ) \
+                  if os.path.isfile( os.path.join( settings.GRAPH_DIR_RIPE, x ) ) ]
+        if str(dst_asn) in files:
+            return True
+        else:
+            return False
+    def get_graph_on_disk(dst_asn):
+        fname = os.path.join( settings.GRAPH_DIR_RIPE, str(dst_asn))
+        gr = load_graph(f, fmt="gt")
+        return gr
+
     dest_based_graphs = {}
     for msm in msms:
         info = parse.mmt_info(msm)
@@ -45,12 +54,16 @@ def compute_dest_based_graphs(msms):
         if info['start_time'] < 1451606400: continue
         if info['type']['af'] != 4: continue
         dst_asn = info['dst_asn']
+        if not dst_asn:
+            continue
         if not info['is_oneoff']:
-            data = parse.parse_msm_trcrt(msm, count=3000)
-        data = parse.parse_msm_trcrt(msm)
+            data = parse.parse_msm_trcrt(msm, count=2000)
+        else:
+            data = parse.parse_msm_trcrt(msm)
         if dst_asn in dest_based_graphs:
-            G = dest_based_graphs[dst_asn][0]
-            asn_to_id = dest_based_graphs[dst_asn][1]
+            G = dest_based_graphs[dst_asn]
+        elif graph_on_disk(dst_asn):
+            G = get_graph_on_disk(dst_asn)
         else:
             G = Graph()
             vprop_asn = G.new_vertex_property("int")
@@ -61,7 +74,10 @@ def compute_dest_based_graphs(msms):
             G.ep.msm = eprop_msm
             eprop_probe = G.new_edge_property("int")
             G.ep.probe = eprop_probe
-            asn_to_id = {}
+        assert 'asn' in G.vp
+        assert 'type' in G.ep
+        assert 'msm' in G.ep
+        assert 'probe' in G.ep
         for d in data:
             aslinks = asp.traceroute_to_aspath(d)
             if not aslinks['_links']: continue
@@ -69,33 +85,37 @@ def compute_dest_based_graphs(msms):
             for link in aslinks:
                 if link['src'] == dst_asn:
                     break
-                if link['src'] in asn_to_id:
-                    v1 = G.vertex(asn_to_id[link['src']])
-                else:
+                v1 = find_vertex(G, G.vp.asn, link['src'])
+                if not v1:
                     v1 = G.add_vertex()
                     G.vp.asn[v1] = int(link['src'])
-                    asn_to_id[link['src']] = int(v1)
-                if link['dst'] in asn_to_id:
-                    v2 = G.vertex(asn_to_id[link['dst']])
                 else:
+                    assert len(v1) == 1
+                    v1 = v1[0]
+                    
+                v2 = find_vertex(G, G.vp.asn, link['dst'])
+                if not v2:
                     v2 = G.add_vertex()
                     G.vp.asn[v2] = int(link['dst'])
-                    asn_to_id[link['dst']] = int(v2)
+                else:
+                    assert len(v2) == 1
+                    v2 = v2[0]
+
                 assert G.vp.asn[v1] == int(link['src'])
                 assert G.vp.asn[v2] == int(link['dst'])
-                e = G.add_edge(v1, v2)
+                ed = G.edge(v1,v2)
+                if not ed:
+                    ed = G.add_edge(v1, v2)
                 if link['type'] == 'i':
-                    G.ep.type[e] = 1
+                    G.ep.type[ed] = 1
                 else:
-                    G.ep.type[e] = 0
-                G.ep.msm[e] = msm
-                G.ep.probe[e] = int(d['prb_id'])
-        dest_based_graphs[dst_asn] = (G, asn_to_id)
+                    G.ep.type[ed] = 0
+                G.ep.msm[ed] = msm
+                G.ep.probe[ed] = int(d['prb_id'])
+        dest_based_graphs[dst_asn] = G
+
     print dest_based_graphs.keys()
-    dest_b_gr = {}
-    for asn, tup in dest_based_graphs.iteritems():
-        dest_b_gr[asn] = tup[0]
-    return dest_b_gr
+    return dest_based_graphs
 
 def wrap_function( msms ):
     try:
@@ -106,16 +126,16 @@ def wrap_function( msms ):
 logging.debug( "Number of measurements in the time frame: %d" % len(msms) )
 
 num_msm_per_process = 5
-num_chunks = len( msms )/num_msm_per_process + 1
-pool = mp.Pool(processes=32)
+num_chunks = len( msms_all )/num_msm_per_process + 1
+pool = mp.Pool(processes=24, maxtasksperchild=100)
 results = []
 for x in range( num_chunks ):
     start = x * num_msm_per_process
     end = start + num_msm_per_process
-    if end > len( msms ) - 1:
-        end = len( msms )
+    if end > len( msms_all ) - 1:
+        end = len( msms_all )
     print start, end
-    results.append(pool.apply_async(wrap_function, args=(msms[ start: end ],)))
+    results.append(pool.apply_async(wrap_function, args=(msms_all[ start: end ],)))
     #compute_dest_based_graphs(msms[start:end])
 
 pool.close()
@@ -190,6 +210,6 @@ print len(all_dst_based_graphs.keys())
 for asn, gr in all_dst_based_graphs.iteritems():
     if not gr: continue
     try:
-        gr.save(settings.GRAPH_DIR + '%s.gt' % asn)
+        gr.save(settings.GRAPH_DIR_RIPE + '%s.gt' % asn)
     except:
         pdb.set_trace()

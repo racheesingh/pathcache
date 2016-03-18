@@ -21,7 +21,10 @@ files = [ os.path.join( settings.GRAPH_DIR_RIPE, f ) for f in files ]
 for f in files:
     asn_to_id = {}
     asn = f.split( '/' )[ -1 ].split('.')[0]
+    print "RIPE graph for ASN", asn
     gr = load_graph(f, fmt="gt")
+    remove_parallel_edges(gr)
+    remove_self_loops(gr)
     tprop = gr.new_edge_property('int16_t')
     gr.edge_properties["source"] = tprop
     cprop = gr.new_edge_property('int16_t')
@@ -31,7 +34,15 @@ for f in files:
         gr.ep["conf"][edge] = 1
     for vertex in gr.vertices():
         asn_to_id[gr.vp.asn[vertex]] = int(vertex)
+    dst_vertex = find_vertex(gr, gr.vp.asn, int(asn))
+    if dst_vertex:
+        dst_vertex = dst_vertex[0]
+        graph_draw(gr, pos=sfdp_layout(gr), vertex_font_size=3, vertex_text=gr.vp.asn,
+                   output="graphs/viz/%s-sfdp.pdf" % asn)
+        graph_draw(gr, pos=radial_tree_layout(gr, dst_vertex), weighted=True, r=1.5,
+                   vertex_font_size=3, vertex_text=gr.vp.asn, output="graphs/viz/%s-radial.pdf" % asn)
     all_graphs[asn] = (gr, asn_to_id)
+
 print "Loaded Ripe graphs in memory"
 print len( all_graphs.keys() )
 
@@ -41,6 +52,7 @@ files = [ os.path.join( settings.GRAPH_DIR_CAIDA, f ) for f in files ]
 
 for f in files:
     asn = f.split( '/' )[ -1 ]
+    print "Parsing CAIDA graph for", asn
     with open( f ) as fi:
         jsonStr = json.load( fi )
     gr = json_graph.node_link_graph( jsonStr )
@@ -100,6 +112,7 @@ files = [ os.path.join( settings.GRAPH_DIR_IPLANE, f ) for f in files ]
 
 for f in files:
     asn = f.split( '/' )[ -1 ]
+    print "Parsing Iplane graph for", asn
     with open( f ) as fi:
         jsonStr = json.load( fi )
     gr = json_graph.node_link_graph( jsonStr )
@@ -156,6 +169,7 @@ files = [ os.path.join( settings.GRAPH_DIR_BGP, f ) for f in files ]
 
 for f in files:
     asn = f.split( '/' )[ -1 ]
+    print "Parsing BGP graph for", asn
     with open( f ) as fi:
         jsonStr = json.load( fi )
     gr = json_graph.node_link_graph( jsonStr )
@@ -207,9 +221,13 @@ for f in files:
     all_graphs[asn] = (gr_asn, asn_to_id)
 
 for asn, gr_tuple in all_graphs.iteritems():
-    gr = gr_tuple[0]
-    if not gr: continue
+    print asn
     try:
+        gr = gr_tuple[0]
+        if not gr: continue
+        if not find_vertex(gr, gr.vp.asn, asn):
+            print "No root node in this graph!, skipping"
+            continue
         gr.save(settings.GRAPH_DIR_FINAL + '%s.gt' % asn)
     except:
-        pdb.set_trace()
+        pass

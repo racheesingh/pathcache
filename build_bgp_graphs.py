@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import mkit.inference.ixp as ixp
 from networkx.readwrite import json_graph
 import networkx as nx
 from collections import defaultdict
@@ -57,16 +58,29 @@ def build_bgp_graph(project=None, collector=None):
                 # Get the origin ASN, is the destination for traffic
                 # toward this prefix
                 origin = hops[-1]
+                if origin in ixp.IXPs:
+                    print "Origin", origin, "is an IXP, it announced prefix", elem.fields['prefix']
+                    elem = rec.get_next_elem()
+                    continue
                 if origin in bgp_graphs:
                     as_graph = bgp_graphs[ origin ]
                 else:
                     as_graph = nx.DiGraph()
                     bgp_graphs[ origin ] = as_graph
                 # Add new edges to the NetworkX graph
-                for i in range(0,len(hops)-1):
-                    as_graph.add_edge(hops[i],hops[i+1])
+                new_hops = []
+                for hop in hops:
+                    if hop in ixp.IXPs:
+                        continue
+                    new_hops.append(hop)
+                if len(new_hops) <= 1:
+                    elem = rec.get_next_elem()
+                    continue
+                for i in range(0,len(new_hops)-1):
+                    as_graph.add_edge(new_hops[i],new_hops[i+1])
                 # Making sure, root has 0 out degree    
-                assert as_graph.out_degree( origin ) == 0
+                #if as_graph.out_degree( origin ) != 0:
+                #    pdb.set_trace()
             elem = rec.get_next_elem()
     print "Total RIB entries parsed", ribEntryCount, "Number of AS paths with loops", loopCount
 

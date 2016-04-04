@@ -61,6 +61,7 @@ def dfs_paths(gr, src_node, dst_node):
         for next in set(vertex.out_neighbours()) - set(path):
             if next == dst_node:
                 yield path + [next]
+                #return path + [next]
             else:
                 stack.append((next, path + [next]))
 
@@ -75,13 +76,22 @@ def get_path( src, dst):
         dst_node = find_vertex(gr, gr.vp.asn, int(dst))
         assert dst_node
         dst_node = dst_node[0]
-        src_dst_paths = dfs_paths(gr, src_node, dst_node)
+        rp = gr.ep.RIPE
+        cp = gr.ep.CAIDA
+        ip = gr.ep.IPLANE
+        GV = GraphView(gr, efilt=lambda e:rp[e] == 1 or cp[e] == 1 or ip[e] == 1)
+        src_dst_paths = dfs_paths(GV, src_node, dst_node)
+        first = next(src_dst_paths, None)
+        if not first:
+            print "Could not find a path from data plane measurements."
+            src_dst_paths = dfs_paths(gr, src_node, dst_node)
         paths = []
         for p in src_dst_paths:
-            paths.append([gr.vp.asn[x] for x in p])
+            edge_path = []
+            paths.append(edge_path)
         return paths
     else:
-        return None
+        return []
 
 pdb.set_trace()
 paths = get_path(5719,3333)

@@ -6,18 +6,17 @@ import json
 import settings
 import pdb
 
-dest_aspaths = iparse.get_iplane_graphs('2016_05_30')
-#dest_aspaths = iparse.get_iplane_graphs("pl_2012")
+dest_aspaths = iparse.get_iplane_prefix_graphs('2016_05_30')
 
 dest_based_graphs = {}
-for dst, aspaths in dest_aspaths.iteritems():
+for tup, aspaths in dest_aspaths.iteritems():
+    asn = tup[0]
+    dst = tup[1]
     assert dst not in dest_based_graphs
-    dst = int(dst)
     G = nx.DiGraph()
+    G.add_node(asn, prefix=dst)
     for aspath in aspaths:
-        # Incomplete seeming path, does not make it to the dest
-        # don't want dangling edges, so skipping these
-        if dst not in aspath[-1]: continue
+        if asn not in aspath[-1]: continue
         src_asn = aspath[0][0]
         for link in aspath:
             if G.has_edge(link[0], link[1]):
@@ -36,12 +35,13 @@ for dst, aspaths in dest_aspaths.iteritems():
             G.add_edge(link[0], link[1], type=link[2], origin=origin)
     dest_based_graphs[dst] = G
 
+pdb.set_trace()
 for asn, gr in dest_based_graphs.iteritems():
     if not gr: continue
     try:
         data = json_graph.node_link_data( gr )
         s = json.dumps( data )
-        with open(settings.GRAPH_DIR_IPLANE + str(asn), "w") as f:
+        with open(settings.GRAPH_DIR_IPLANE_PREF + str(asn), "w") as f:
             f.write( s )
     except:
         pdb.set_trace()

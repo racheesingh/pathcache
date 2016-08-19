@@ -26,15 +26,13 @@ def build_bgp_graph(project=None, collector=None):
     stream.add_filter('record-type','ribs')
     
     # Consider this time interval:
-    #cur_time = int( time.time() )
-    cur_time  = 1471219200
+    cur_time = int( time.time() )
     if collector and 'views' in collector:
         interval = 3
     else:
         interval = 10
         
-    #prev_time = int(cur_time - (60 * 60 * interval))
-    prev_time = 1471132800
+    prev_time = int(cur_time - (60 * 60 * interval))
     print "Starting stream with %d interval" % interval
     stream.add_interval_filter(prev_time, cur_time)
     stream.start()
@@ -48,7 +46,7 @@ def build_bgp_graph(project=None, collector=None):
             hops = [k for k, g in groupby(elem.fields['as-path'].split(" "))]
             loops = [i for i, x in enumerate(hops) if hops.count(x) > 1]
             if loops:
-                # print( "Routing loop! AS path %s" % elem.fields['as-path'] )
+                print( "Routing loop! AS path %s" % elem.fields['as-path'] )
                 loopCount += 1
                 elem = rec.get_next_elem()
                 continue
@@ -59,15 +57,17 @@ def build_bgp_graph(project=None, collector=None):
                 # Get the origin ASN, is the destination for traffic
                 # toward this prefix
                 origin = hops[-1]
+                dst_prefix = elem.fields['prefix'].replace('/', '_')
                 if origin in ixp.IXPs:
                     print "Origin", origin, "is an IXP, it announced prefix", elem.fields['prefix']
                     elem = rec.get_next_elem()
                     continue
                 if origin in bgp_graphs:
-                    as_graph = bgp_graphs[ origin ]
+                    as_graph = bgp_graphs[ dst_prefix ]
                 else:
                     as_graph = nx.DiGraph()
-                    bgp_graphs[ origin ] = as_graph
+                    as_graph.add_node(origin, prefix=dst_prefix)
+                    bgp_graphs[dst_prefix] = as_graph
                 # Add new edges to the NetworkX graph
                 new_hops = []
                 for hop in hops:
@@ -104,12 +104,12 @@ print "Getting RIB from route-views.route-views2"
 build_bgp_graph(collector='route-views2')
 print len( bgp_graphs.keys() )
 
-for asn, gr in bgp_graphs.iteritems():
+for pref, gr in bgp_graphs.iteritems():
     if not gr: continue
     try:
         data = json_graph.node_link_data( gr )
         s = json.dumps( data )
-        with open( settings.GRAPH_DIR_BGP + '%s' % asn, "w" ) as f:
+        with open( settings.GRAPH_DIR_BGP_PREF + '%s' % pref, "w" ) as f:
             f.write( s )
     except:
         pdb.set_trace()

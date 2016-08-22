@@ -6,8 +6,7 @@ import json
 import settings
 import pdb
 
-dest_aspaths = iparse.get_iplane_graphs('2016_05_30')
-#dest_aspaths = iparse.get_iplane_graphs("pl_2012")
+dest_aspaths = iparse.get_iplane_graphs('2016_08_15')
 
 dest_based_graphs = {}
 for dst, aspaths in dest_aspaths.iteritems():

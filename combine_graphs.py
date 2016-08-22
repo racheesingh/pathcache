@@ -202,6 +202,13 @@ for f in files:
             continue
     all_graphs[asn] = gr_asn
 '''
+=======
+                gr_asn.ep.type[new_edge] = 0
+        except OverflowError:
+            continue
+    all_graphs[asn] = gr_asn
+
+>>>>>>> fc3d2764437ed4fe5787beffcf0b395c6bf4dd9a
 files = [ x for x in os.listdir( settings.GRAPH_DIR_BGP ) \
           if os.path.isfile( os.path.join( settings.GRAPH_DIR_BGP, x ) ) ]
 files = [ os.path.join( settings.GRAPH_DIR_BGP, f ) for f in files ]
@@ -250,7 +257,9 @@ for f in files:
         except OverflowError:
             continue
     all_graphs[asn] = gr_asn
+<<<<<<< HEAD
 '''
+
 for asn, gr in all_graphs.iteritems():
     print asn
     try:

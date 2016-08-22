@@ -14,6 +14,7 @@ import glob
 msms = []
 
 def parse_caida_json_streaming(fname):
+
     num_trcrts = 0
     with open(fname) as fi:
         dest_based_aspaths = {}
@@ -70,7 +71,9 @@ def parse_caida_json_streaming(fname):
 
 dest_based_aspaths = []
 files = filter(os.path.isfile, glob.glob(settings.CAIDA_DATA + "*"))
+
 print files
+
 for fname in files:
     print "Converting %s to JSON" % fname
     convert_to_json_cmd = "sc_warts2json %s > %s" % (fname, fname+".json")

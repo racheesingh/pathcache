@@ -55,7 +55,17 @@ def compute_dest_based_graphs(msms):
         if not dst_asn:
             continue
         if not info['is_oneoff']:
-            data = parse.parse_msm_trcrt(msm, count=500)
+            period  = int(info['interval'])
+            if info['stop_time']:
+                stop_time = int(info['stop_time'])
+            else:
+                stop_time = int(time.time())
+            start = stop_time - 5 * period
+            end = stop_time
+            try:
+                data = parse.parse_msm_trcrt(msm, start=start, end=end, count=500)
+            except urllib2.HTTPError:
+                continue
         else:
             data = parse.parse_msm_trcrt(msm)
         if dst_asn in dest_based_graphs:
@@ -138,9 +148,9 @@ logging.debug( "Number of measurements in the time frame: %d" % len(msms) )
 
 num_msm_per_process = 5
 num_chunks = len( msms_all )/num_msm_per_process + 1
-pool = mp.Pool(processes=32, maxtasksperchild=20)
+pool = mp.Pool(processes=45, maxtasksperchild=30)
 results = []
-for x in range( num_chunks ):
+for x in range(num_chunks):
     start = x * num_msm_per_process
     end = start + num_msm_per_process
     if end > len( msms_all ) - 1:

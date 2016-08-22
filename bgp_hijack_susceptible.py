@@ -1,10 +1,14 @@
 #!/usr/bin/python
 import socket
+
 import logging
 import settings
 import random
 import networkx as nx
 import json
+import ripe.atlas.sagan
+import pycountry
+from ripe.atlas.cousteau import ProbeRequest
 import subprocess
 import pdb
 import fnss
@@ -95,7 +99,7 @@ with open("cipollino-verify/bad_ases_feamster") as fi:
     badStr = fi.read()
 
 bad_ases = []
-for line in badStr.split('\n'):
+<<<<<<< HEAD
     #if line.startswith('ASN'): continue
     asn = line.split()[0]
     bad_ases.append(int(asn))
@@ -155,4 +159,3 @@ with open("cipollino-verify/hijack_potential_ex", "w") as fi:
     json.dump(potential_hijacks, fi)
 with open("cipollino-verify/target_hijacked_ex", "w") as fi:
     json.dump(targets_hijacked_percent, fi)
-

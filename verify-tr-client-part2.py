@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from Atlas import Measure
+from ripe.atlas.cousteau import Probe
 import random
 from collections import defaultdict
 from itertools import groupby
@@ -120,9 +120,12 @@ def get_path( src, dst):
         dst_node = find_vertex(gr, gr.vp.asn, int(dst))
         assert dst_node
         dst_node = dst_node[0]
+<<<<<<< HEAD
         rp = gr.ep.RIPE
         cp = gr.ep.CAIDA
         ip = gr.ep.IPLANE
+=======
+>>>>>>> fc3d2764437ed4fe5787beffcf0b395c6bf4dd9a
         GV = GraphView(gr, efilt=lambda e:rp[e] == 1 or cp[e] == 1 or ip[e] == 1)
         src_dst_paths = dfs_paths(GV, src_node, dst_node)
         first = next(src_dst_paths, None)

@@ -43,6 +43,7 @@ def build_bgp_graph(project=None, collector=None):
     while(stream.get_next_record(rec)):
         elem = rec.get_next_elem()
         while(elem):
+            pdb.set_trace()
             ribEntryCount += 1
             peer = str(elem.peer_asn)
             hops = [k for k, g in groupby(elem.fields['as-path'].split(" "))]

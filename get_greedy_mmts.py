@@ -1,4 +1,5 @@
 import json
+import random
 import sys
 import dill
 import copy
@@ -14,6 +15,9 @@ import settings
 
 with open("../asgraphs/analysis/asn_to_cc") as fi:
     asn_to_cc = json.load(fi)
+
+country_codes_shuffled = list(set(asn_to_cc.values()))
+random.shuffle(country_codes_shuffled)
 all_probes = probes.all_probes
 
 if sys.argv[1] == 'ripe':
@@ -104,6 +108,8 @@ with open("../asgraphs/data2/caida/20161201.as-rel.txt") as f:
 single_homed_asns = [x[0] for x in provider_asns.items() if len(x[1]) == 1]
 
 def get_single_homed_customers(asn):
+    print "FOR THE TIME BEING, NO SINGLE_HOMED GAINS"
+    return []
     if str(asn) not in customer_asns:
         return []
     single_homed = set()
@@ -112,6 +118,61 @@ def get_single_homed_customers(asn):
             single_homed.add(cust)
     return list(single_homed)
 
+def geo_distributed_coverage(subsets, k, superset):
+    print "Geodistributed selection"
+    superset_paths = copy.deepcopy(superset)
+    subsets_copy = copy.deepcopy(subsets)
+    nodes_covered = []
+    mmts_ordered = []
+    countries_covered = []
+    measurements = subsets.keys()
+    country_codes_shuffled_copy = copy.deepcopy(country_codes_shuffled)
+    measurements = subsets.keys()
+    random.shuffle(measurements)
+    for mmt in measurements:
+        if not superset_paths:
+	    print "Finished Early!"
+	    return mmts_ordered, nodes_covered
+        if len(mmts_ordered) < len(country_codes_shuffled):
+            if mmt in asn_to_cc and asn_to_cc[mmt] in countries_covered:
+                continue
+            if mmt not in asn_to_cc: continue
+    	    gain = set(subsets_copy[mmt]).intersection(superset_paths)
+	    nodes_covered.append(list(gain))
+	    mmts_ordered.append(mmt)
+	    subsets_copy.pop(mmt)
+	    superset_paths = superset_paths.difference(gain)
+            countries_covered.append(asn_to_cc[mmt])
+        else:
+            break
+    # These are the left over measurements
+    measurements = list(set(measurements).difference(set(mmts_ordered)))
+    mmts_per_country = {}
+    for mmt in measurements:
+        if mmt not in asn_to_cc:
+            print "ASN", mmt, "not in mapping"
+            asn_to_cc[mmt] = 'XX'
+        cc = asn_to_cc[mmt]
+        if cc not in mmts_per_country:
+            mmts_per_country[cc] = [mmt]
+        else:
+            mmts_per_country[cc].append(mmt)
+        
+    while superset_paths:
+        random_cc = random.choice(mmts_per_country.keys())
+        possible_mmts = mmts_per_country[random_cc]
+        mmt = random.choice(possible_mmts)
+        mmts_per_country[random_cc].remove(mmt)
+        if not mmts_per_country[random_cc]:
+            mmts_per_country.pop(random_cc)
+        assert mmt not in mmts_ordered
+    	gain = set(subsets_copy[mmt]).intersection(superset_paths)
+        nodes_covered.append(list(gain))
+        mmts_ordered.append(mmt)
+	subsets_copy.pop(mmt)
+	superset_paths = superset_paths.difference(gain)
+    return mmts_ordered, nodes_covered
+                        
 def random_coverage(subsets, k, superset):
     print "Random selection"
     superset_paths = copy.deepcopy(superset)
@@ -127,7 +188,7 @@ def random_coverage(subsets, k, superset):
     	gain = set(subsets_copy[mmt]).intersection(superset_paths)
 	nodes_covered.append(list(gain))
 	mmts_ordered.append(mmt)
-	subsets_copy.pop(max_gain_mmt)
+	subsets_copy.pop(mmt)
 	superset_paths = superset_paths.difference(gain)
     return mmts_ordered, nodes_covered
 
@@ -164,6 +225,11 @@ if len(sys.argv) > 2:
     if sys.argv[2] == 'random':
         greedy_max_coverage = random_coverage
         strategy = "random"
+    elif sys.argv[2] == 'geod':
+        greedy_max_coverage = geo_distributed_coverage
+        strategy = "geod"
+else:
+    strategy="greedy"
         
 overall_mmt_gain = {}
 overall_single_homed_gain_content = set()
@@ -203,7 +269,7 @@ for top_content_pref in top_content_prefs:
     measurement_gain.append([mmt_subset, coverage])
     overall_mmt_gain[top_content_pref] = measurement_gain
 
-with open("top_content_coverage-%s-%s.json" % (type_probes, strategy), "w") as fi:
+with open("top_content_coverage-%s-%s-nosh.json" % (type_probes, strategy), "w") as fi:
     json.dump(overall_mmt_gain, fi)
 
 overall_mmt_gain = {}
@@ -231,7 +297,7 @@ for asn, random_pref in random_prefs.iteritems():
     measurement_gain.append([mmt_subset, coverage])
     overall_mmt_gain[random_pref] = measurement_gain
     
-with open("random_coverage-%s-%s.json" % (type_probes, strategy), "w") as fi:
+with open("random_coverage-%s-%s-nosh.json" % (type_probes, strategy), "w") as fi:
     json.dump(overall_mmt_gain, fi)
 
 overall_mmt_gain = {}
@@ -260,7 +326,7 @@ for asn, top_cust_cone_pref in top_cust_cone_prefs.iteritems():
     measurement_gain.append([mmt_subset, coverage])
     overall_mmt_gain[top_cust_cone_pref] = measurement_gain
 
-with open("top_cust_cone_coverage-%s-%s.json" % (type_probes, strategy), "w") as fi:
+with open("top_cust_cone_coverage-%s-%s-nosh.json" % (type_probes, strategy), "w") as fi:
     json.dump(overall_mmt_gain, fi)
 
 overall_mmt_gain = {}
@@ -289,5 +355,5 @@ for asn, top_eyeball_pref in top_eyeball_prefs.iteritems():
     measurement_gain.append([mmt_subset, coverage])
     overall_mmt_gain[top_eyeball_pref] = measurement_gain
 
-with open("top_eyeball_coverage-%s-%s.json" % (type_probes, strategy), "w") as fi:
+with open("top_eyeball_coverage-%s-%s-nosh.json" % (type_probes, strategy), "w") as fi:
     json.dump(overall_mmt_gain, fi)

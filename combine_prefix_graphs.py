@@ -16,21 +16,21 @@ BGP = 4
 def get_new_gr(gr=None):
     if not gr:
         gr = Graph()
-    if 'RIPE' not in gr.ep:
-        tprop = gr.new_edge_property('bool')
-        gr.edge_properties["RIPE"] = tprop
-    if 'CAIDA' not in gr.ep:
-        tprop = gr.new_edge_property('bool')
-        gr.edge_properties["CAIDA"] = tprop
-    if 'IPLANE' not in gr.ep:
-        tprop = gr.new_edge_property('bool')
-        gr.edge_properties["IPLANE"] = tprop
-    if 'BGP' not in gr.ep:
-        tprop = gr.new_edge_property('bool')
-        gr.edge_properties["BGP"] = tprop
-    if 'conf' not in gr.ep:
-        tprop = gr.new_edge_property('int16_t')
-        gr.edge_properties["conf"] = tprop
+    # if 'RIPE' not in gr.ep:
+    #     tprop = gr.new_edge_property('bool')
+    #     gr.edge_properties["RIPE"] = tprop
+    # if 'CAIDA' not in gr.ep:
+    #     tprop = gr.new_edge_property('bool')
+    #     gr.edge_properties["CAIDA"] = tprop
+    # if 'IPLANE' not in gr.ep:
+    #     tprop = gr.new_edge_property('bool')
+    #     gr.edge_properties["IPLANE"] = tprop
+    # if 'BGP' not in gr.ep:
+    #     tprop = gr.new_edge_property('bool')
+    #     gr.edge_properties["BGP"] = tprop
+    # if 'conf' not in gr.ep:
+    #     tprop = gr.new_edge_property('int16_t')
+    #     gr.edge_properties["conf"] = tprop
     if 'asn' not in gr.vp:
         vprop_asn = gr.new_vertex_property("int")
         gr.vp.asn = vprop_asn
@@ -43,6 +43,16 @@ def get_new_gr(gr=None):
     if 'prefix' not in gr.vp:
         vprop_prefix = gr.new_vertex_property('string')
         gr.vp.prefix  = vprop_prefix
+    if 'mmt_type' not in gr.vp:
+        vprop_mmt_type = gr.new_vertex_property("string", val="")
+        gr.vp.mmt_type = vprop_mmt_type
+    if 'generated' not in gr.vp:
+        vprop_gen = gr.new_vertex_property("int", val=0)
+        gr.vp.generated = vprop_gen
+    if "str_path" not in gr.vp:
+        vprop_path_str = gr.new_vertex_property("string")
+        gr.vp.str_path = vprop_path_str
+
     return gr
     
 all_graphs = {}
@@ -56,7 +66,7 @@ for f in files:
     gr = load_graph(f, fmt="gt")
     remove_parallel_edges(gr)
     remove_self_loops(gr)
-    gr = get_new_gr(gr)
+    #gr = get_new_gr(gr)
     root_node = find_vertex(gr, gr.vp.prefix, pref)
     assert len(root_node) == 1
     root_node = root_node[0]
@@ -64,9 +74,9 @@ for f in files:
     dst_asn_node = find_vertex(gr, gr.vp.asn, dst_asn)
     if len(dst_asn_node) != 1:
         pdb.set_trace()
-    for edge in gr.edges():
-        gr.ep["RIPE"][edge] = True
-        gr.ep["conf"][edge] = 1
+    for vertex in gr.vertices():
+        if not gr.vp.mmt_type[vertex]:
+            pdb.set_trace()
     all_graphs[pref] = gr
 
 print "Loaded Ripe graphs in memory"
@@ -75,9 +85,11 @@ print len( all_graphs.keys() )
 files = [ x for x in os.listdir( settings.GRAPH_DIR_CAIDA_PREF ) \
           if os.path.isfile( os.path.join( settings.GRAPH_DIR_CAIDA_PREF, x ) ) ]
 files = [ os.path.join( settings.GRAPH_DIR_CAIDA_PREF, f ) for f in files ]
-
+#files = [f for f in files if '216.58.219.0_24' in f]
+#pdb.set_trace()
 for f in files:
     pref = f.split( '/' )[ -1 ]
+    #if pref == '216.58.219.0_24': pdb.set_trace()
     print "Parsing CAIDA graph for PREF", pref
     with open( f ) as fi:
         jsonStr = json.load( fi )
@@ -87,6 +99,8 @@ for f in files:
         gr_asn = all_graphs[pref]
         root_node = find_vertex(gr_asn, gr_asn.vp.prefix, pref)
         assert len(root_node)  == 1
+        root_node = root_node[0]
+        assert gr_asn.vp.prefix[root_node] == pref
     else:
         gr_asn = get_new_gr()
         # find the prefix node in the caida graph?
@@ -95,41 +109,59 @@ for f in files:
         if len(attrs) != 1:
             print "graph for %s does not have prefix node" % pref
             continue
-        #assert len(attrs) == 1
         root_asn = attrs.keys()[0]
         assert attrs[root_asn] == pref
         root_node = gr_asn.add_vertex()
+        gr_asn.vp.mmt_type[root_node] = ";CAIDA"
         try:
             gr_asn.vp.asn[root_node] = root_asn
             gr_asn.vp.prefix[root_node] = pref
         except OverflowError:
             continue
         
+    for node in gr.nodes_iter(data=True):
+        #if node[0] == 16735: pdb.set_trace()
+        existing_node = find_vertex(gr_asn, gr_asn.vp.asn, node[0])
+        if not existing_node:
+            new_vertex = gr_asn.add_vertex()
+            gr_asn.vp.mmt_type[new_vertex] += ";%s" % "CAIDA"
+        else:
+            assert len(existing_node) == 1
+            new_vertex = existing_node[0]
+            assert gr_asn.vp.mmt_type[new_vertex]
+            gr_asn.vp.mmt_type[new_vertex] += ";%s" % "CAIDA"
+        if new_vertex in gr_asn.vp.asn and gr_asn.vp.asn[new_vertex]:
+            assert gr_asn.vp.asn[new_vertex] == node[0]
+        else:
+            gr_asn.vp.asn[new_vertex] = node[0]
+        
+        properties = node[1]
+        if properties:
+            if "generated" in properties:
+                gr_asn.vp.generated[new_vertex] += properties["generated"]
+            if "str_path" in properties:
+                if gr_asn.vp.str_path[new_vertex]:
+                    print gr_asn.vp.str_path[new_vertex], properties["str_path"]
+                    if not gr_asn.vp.str_path[new_vertex] == properties["str_path"]:
+                        print gr_asn.vp.str_path[new_vertex], properties["str_path"]
+                else:
+                    gr_asn.vp.str_path[new_vertex] = properties["str_path"]
+
     for edge in gr.edges_iter(data=True):
         src = int(edge[0])
         dst = int(edge[1])
         try:
             new_src = find_vertex(gr_asn, gr_asn.vp.asn, src)
-            if new_src:
-                assert len(new_src) == 1
-                new_src = new_src[0]
-            else:
-                new_src = gr_asn.add_vertex()
-                gr_asn.vp.asn[new_src] = src
-
+            assert new_src
+            assert len(new_src) == 1
+            new_src = new_src[0]
             new_dst = find_vertex(gr_asn, gr_asn.vp.asn, dst)
-            if new_dst:
-                if len(new_dst) != 1: pdb.set_trace()
-                #assert len(new_dst) == 1
-                new_dst = new_dst[0]
-            else:
-                new_dst = gr_asn.add_vertex()
-                gr_asn.vp.asn[new_dst] = dst
+            assert new_dst
+            assert len(new_dst) == 1
+            new_dst = new_dst[0]
 
             if gr_asn.edge(int(new_src), int(new_dst)):
                 existing_edge = gr_asn.edge(int(new_src), int(new_dst))
-                gr_asn.ep.conf[existing_edge] += 1
-                gr_asn.ep.CAIDA[existing_edge] = True
                 existing_origin = gr_asn.ep.origin[existing_edge]
                 caida_origin = edge[-1]['origin']
                 combined_origin = {}
@@ -144,17 +176,18 @@ for f in files:
                 gr_asn.ep.origin[existing_edge] = combined_origin
             else:
                 new_edge = gr_asn.add_edge(new_src, new_dst)
-                gr_asn.ep.conf[new_edge] = 1
                 if edge[2]['type'] == 'i':
                     gr_asn.ep.type[new_edge] = 1
                 else:
                     gr_asn.ep.type[new_edge] = 0
                 gr_asn.ep.origin[new_edge] = edge[-1]['origin']
-                gr_asn.ep.CAIDA[new_edge] = True
+
         except OverflowError:
             continue
+    pdb.set_trace()
     all_graphs[pref] = gr_asn
-
+    gr_asn.save(settings.GRAPH_DIR_FINAL_PREF + '%s.gt' % pref)
+'''
 files = [ x for x in os.listdir( settings.GRAPH_DIR_IPLANE_PREF ) \
           if os.path.isfile( os.path.join( settings.GRAPH_DIR_IPLANE_PREF, x ) ) ]
 files = [ os.path.join( settings.GRAPH_DIR_IPLANE_PREF, f ) for f in files ]
@@ -230,7 +263,7 @@ for f in files:
         except OverflowError:
             continue
     all_graphs[pref] = gr_asn
-'''
+
 files = [ x for x in os.listdir( settings.GRAPH_DIR_BGP ) \
           if os.path.isfile( os.path.join( settings.GRAPH_DIR_BGP, x ) ) ]
 files = [ os.path.join( settings.GRAPH_DIR_BGP, f ) for f in files ]
@@ -280,7 +313,7 @@ for f in files:
             continue
     all_graphs[asn] = gr_asn
 '''
-pdb.set_trace()
+#pdb.set_trace()
 for prefix, gr in all_graphs.iteritems():
     print "Flusing to disk", prefix
     try:

@@ -12,8 +12,10 @@ import settings
 import json
 import glob
 msms = []
-
+num_mmts = 0
 def parse_caida_json_streaming(fname):
+    global num_mmts
+    print num_mmts
     num_trcrts = 0
     with open(fname) as fi:
         dest_based_aspaths = {}
@@ -25,6 +27,7 @@ def parse_caida_json_streaming(fname):
                 continue
             if trcrt['stop_reason'] != 'COMPLETED':
                 continue
+            num_mmts += 1
             src = trcrt['src']
             dst = trcrt['dst']
             rnode = ip2asn.ip_to_pref(dst)
@@ -52,6 +55,7 @@ def parse_caida_json_streaming(fname):
                 if ixp_match:
                     continue
                 asn = ip2asn.ip2asn_bgp(addr)
+                if not asn: continue
                 if asn in ixp.IXPs:
                     continue
                 last_hop_nr = this_hop_nr
@@ -68,8 +72,8 @@ def parse_caida_json_streaming(fname):
                         aslinks.append(link)
             if aslinks:
                 dest_based_aspaths[(int(dst_asn), dst_prefix)].append(aslinks)
-    print len(dest_based_aspaths)
-    print num_trcrts
+    #print len(dest_based_aspaths)
+    #print num_trcrts
     return dest_based_aspaths
 
 dest_based_aspaths = []
@@ -94,30 +98,47 @@ for asp_list in dest_based_aspaths:
             G = nx.DiGraph()
             G.add_node(dst_asn, prefix=dst_prefix)
         for aspath in aspaths:
-            #for first, second in zip(aspath, aspath[1:]):
-            #    G.add_edge(first, second)
             src_asn = aspath[0][0]
+            if dst_prefix == '216.58.219.0_24' and int(src_asn) == 16735: pdb.set_trace()
+            prev_edge = None
+            str_path = " ".join([str(x[0]) for x in aspath])
+            str_path += " " + str(x[1])
             for link in aspath:
                 if G.has_edge(link[0], link[1]):
                     edge_data = G.get_edge_data(link[0], link[1])
                 else:
                     edge_data = {}
+
+                if not prev_edge:
+                    assert str(link[0]) == str(src_asn)
+                    key = "gen"
+                    if G.has_node(link[0]) and 'generated' in G.node[link[0]]:
+                        node_data = G.node[link[0]]
+                    else:
+                        node_data = {'generated':0}
+                    G.add_node(link[0], generated=node_data['generated']+1, str_path=str_path)
+                else:
+                    key = prev_edge
+
+                if key != "gen":
+                    if str(link[0]) not in key.split('-')[-1]:
+                        pdb.set_trace()
                 if 'origin' in edge_data:
                     origin = edge_data['origin']
                 else:
                     origin = {}
-                if src_asn not in origin:
+                if key not in origin:
                     count = 1
                 else:
-                    count = origin[src_asn] + 1
-                origin[src_asn] = count
+                    count = origin[key] + 1
+                origin[key] = count
+                prev_edge = "%s-%s" % (link[0], link[1])
                 G.add_edge(link[0], link[1], type=link[2], origin=origin)
         dest_based_graphs_overall[dst_prefix] = G
         #if dst_asn not in G.node:
         #    print "Didnt find dst asn in graph", dst_asn
         #    continue
         #G.node[dst_asn] = {'prefix': dst_prefix}
-
 
 for dst_prefix, gr in dest_based_graphs_overall.iteritems():
     if not gr: continue

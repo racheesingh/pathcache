@@ -31,16 +31,16 @@ def are_siblings( as1, as2 ):
         return False
     return orgs[ as1 ] == orgs[ as2 ]
 
-with open(settings.RIPE_MSMS) as fi:
+with  open("data/ripe/meta-1473674448-1474884048") as fi:
     msms = json.load(fi)
 msms_all = list(frozenset(msms))
 
-tot_len =  len(msms_all)
-chunk = tot_len/3
-print chunk
-#msms_all = msms_all[:chunk]
-#msms_all = msms_all[chunk:(2*chunk)]
-msms_all = msms_all[(2*chunk):]
+# tot_len =  len(msms_all)
+# chunk = tot_len/3
+# print chunk
+# #msms_all = msms_all[:chunk]
+# #msms_all = msms_all[chunk:(2*chunk)]
+# msms_all = msms_all[(2*chunk):]
 print len(msms_all)
 pdb.set_trace()
 

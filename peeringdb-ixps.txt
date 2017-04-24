@@ -1,0 +1,482 @@
+Equinix Chicago	Equinix Chicago Exchange	Chicago	US	206.223.119.0/24
+Equinix Dallas	Equinix Dallas Exchange	Dallas	US	206.223.118.0/24
+Equinix Los Angeles	Equinix Los Angeles Exchange	Los Angeles	US	206.223.123.0/24
+Equinix San Jose	Equinix San Jose / Bay Area Exchange	San Jose	US	206.223.116.0/24
+Equinix Palo Alto	Equinix Internet Exchange Palo Alto	Palo Alto	US	198.32.176.0/24
+Equinix Atlanta	Equinix Internet Exchange Atlanta	Atlanta	US	198.32.182.0/24
+Equinix Vienna, VA	Equinix Internet Exchange Vienna, VA	Vienna	US	198.32.190.0/24
+Equinix Seattle	Equinix Internet Exchange Seattle	Seattle	US	198.32.134.0/24
+Equinix New York	Equinix Internet Exchange New York	New York	US	198.32.118.0/24
+SIX	Seattle Internet Exchange	Seattle	US	206.81.80.0/23
+NYIIX	New York International Internet eXchange	New York	US	198.32.160.0/24
+MAE East	NULL	No. VA & NYC	US	198.32.187.0/24
+MAE West	NULL	San Jose & Los Angeles	US	198.32.200.0/24
+NOTA	NAP Of The Americas	Miami	US	198.32.124.0/23
+LINX Juniper LAN	London Internet Exchange Ltd.	London	UK	195.66.224.0/22
+MAE Central	NULL	Dallas & Chicago	US	198.32.139.0/24
+IX Australia WA	West Australian Internet Exchange (WAIX)	Perth/WA	AU	198.32.212.0/24
+Telx Atlanta	TIE:Atlanta, Atlanta Internet Exchange, AtlantaIX	Atlanta	US	198.32.132.0/24
+LAIIX	Los Angeles International Internet eXchange	Los Angeles	US	198.32.146.0/24
+MXP	Massachusetts eXchange Point	Boston	US	198.32.178.0/24
+AMS-IX	Amsterdam Internet Exchange	Amsterdam	NL	195.69.144.0/22
+Equinix Zurich	Equinix Zurich, formerly TIX	Zurich	CH	194.42.48.0/24
+JPIX	Japan Internet Exchange	Tokyo	JP	210.171.224.0/24
+DE-CIX Frankfurt	Deutscher Commercial Internet Exchange	Frankfurt	DE	80.81.192.0/22
+SFIX	San Francisco Internet Exchange	San Francisco	US	198.32.129.0/24
+SFINX	Service for French INternet eXchange	Paris	FR	194.68.129.0/24
+MIX-IT	Milano Internet eXchange	Milan	IT	217.29.66.0/23
+PARIX	NULL	Paris	FR	198.32.247.0/24
+NYCX	Free NYIIX Alternative	New York	US	198.32.229.0/24
+HKIX	Hong Kong Internet Exchange	Hong Kong	HK	202.40.160.0/23
+TWIX	Taiwan Internet Exchange	Taipei	TW	210.62.255.0/24
+Manila IX	Manila Internet Exchange	Manila 	PH	202.0.91.0/24
+INEX LAN1	Internet Neutral Exchange Association Ltd.	Dublin	IE	193.242.111.0/25
+LIPEX	London Internet Providers Exchange	London	UK	193.109.219.0/24
+VIX	Vienna Internet Exchange	Vienna	AT	193.203.0.0/24
+XchangePoint	XchangePoint Europe	London	UK	217.79.160.0/23
+LONAP	London Network Access Point	London	UK	5.57.80.0/22
+BiX	Budapest Internet Exchange	Budapest	HU	193.188.137.0/24
+RBIEX	RBIEX Limited	London	UK	193.25.170.0/23
+Edge-IX	NULL	UK	UK	212.121.32.0/19
+FreeBIX	Free Belgian Internet Exchange	Belgium	BE	195.85.203.0/24
+BNIX	Belgian National Internet eXchange	Brussels	BE	194.53.172.0/25
+SwissIX	Swiss Internet Exchange	Zurich	CH	91.206.52.0/23
+CATNIX	Catalunya Neutral Internet Exchange	Barcelona	ES	193.242.98.0/24
+ESPANIX	Espana Internet Exchange	Madrid	ES	193.149.1.0/25
+NL-IX	Netherlands Internet Exchange	Amsterdam	NL	193.239.116.0/23
+KD-X	KDWEB Exchange	San Jose	US	198.32.131.0/24
+Pouix	Paris Operators for Universal Internet eXchange	Paris	FR	80.67.175.0/26
+FNIX6	French National Internet Exchange IPv6	Paris	FR	2001:7f8:25:1::/64
+Lyonix	Lyonix, the Lyon IX	Lyon	FR	77.95.71.0/24
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	194.68.123.0/24
+NIX CZ	Neutral Internet Exchange	Prague	CZ	91.210.16.0/22
+INXS	Internet Exchange Service	Munich	DE	194.59.190.0/24
+GN-IX	Groningen Internet Exchange	Groningen	NL	193.111.172.0/24
+LIX	Luxemburg Internet Exchange	Luxemburg	LU	193.168.127.0/24
+UK6X	BTexact Technologies IPv6	Ipswich	UK	2001:07F8:0002::/48
+SD-NAP	San Diego NAP	San Diego	US	198.17.46.0/24
+PacificWave	Pacific Wave Exchange in Los Angeles and Seattle	West Coast	US	207.231.241.0/24
+NIX	Norwegian Internet Exchange	Oslo	NO	193.156.90.0/24
+BCIX	Berlin Commercial Internet Exchange	Berlin	DE	193.178.185.0/24
+iAIX	iAdvantage Internet Exchange	Hong Kong	HK	210.184.127.0/24
+MAD-IX	Madrid Internet Exchange	Madrid	ES	195.245.196.0/24
+ECIX Duesseldorf	European Commercial Exchange Duesseldorf	Duesseldorf	DE	194.146.118.0/24
+Equinix Sydney	Equinix Sydney Exchange	Sydney	AU	202.167.228.0/24
+DE-CIX Frankfurt	Deutscher Commercial Internet Exchange	Frankfurt	DE	2001:7f8::/64
+DE-CIX Frankfurt	Deutscher Commercial Internet Exchange	Frankfurt	DE	80.81.200.0/24
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	195.245.240.0/24
+Equinix Palo Alto	Equinix Internet Exchange Palo Alto	Palo Alto	US	198.32.175.0/24
+Equinix Palo Alto	Equinix Internet Exchange Palo Alto	Palo Alto	US	198.32.177.0/24
+Equinix Palo Alto	Equinix Internet Exchange Palo Alto	Palo Alto	US	2001:504:d::/64
+DIX-IE	Distributed IX in EDO (former NSPIXP2)	Tokyo	JP	202.249.2.0/24
+SOX	Singapore Open Exchange	Singapore	SG	198.32.141.0/24
+WIX	Warsaw Internet eXchange	Warsaw	PL	195.85.195.0/24
+Equinix Atlanta	Equinix Internet Exchange Atlanta	Atlanta	US	198.32.181.0/24
+Equinix Atlanta	Equinix Internet Exchange Atlanta	Atlanta	US	198.32.183.0/24
+Equinix New York	Equinix Internet Exchange New York	New York	US	198.32.119.0/24
+Equinix Seattle	Equinix Internet Exchange Seattle	Seattle	US	198.32.133.0/24
+Equinix Vienna, VA	Equinix Internet Exchange Vienna, VA	Vienna	US	198.32.191.0/24
+Equinix Vienna, VA	Equinix Internet Exchange Vienna, VA	Vienna	US	198.32.192.0/24
+FICIX	Finnish Communication and Internet Exchange	Helsinki	FI	193.110.224.0/24
+GigaPix	GIGAbit Portuguese Internet eXchange	Lisbon	PT	193.136.250.0/24
+SIX	Seattle Internet Exchange	Seattle	US	2001:504:16::/64
+MSK-IX	Moscow Internet Exchange	Moscow	RU	193.232.244.0/23
+TOP-IX	Consorzio Top-IX	Turin	IT	194.116.96.0/24
+JINX	Johannesburg Internet Exchange	Johannesburg	ZA	196.223.14.0/24
+JINX	Johannesburg Internet Exchange	Johannesburg	ZA	2001:43f8:01f0:0::/64
+INEX LAN1	Internet Neutral Exchange Association Ltd.	Dublin	IE	2001:7f8:18::/48
+SOL-IX / SOLIX	Stockholm Open Local Internet Exchange	Stockholm	SE	193.110.13.0/24
+SOL-IX / SOLIX	Stockholm Open Local Internet Exchange	Stockholm	SE	2001:7f8:21:9::/64
+SOL-IX / SOLIX	Stockholm Open Local Internet Exchange	Stockholm	SE	193.110.12.0/24
+SOL-IX / SOLIX	Stockholm Open Local Internet Exchange	Stockholm	SE	2001:7f8:21:12::/64
+SOL-IX / SOLIX	Stockholm Open Local Internet Exchange	Stockholm	SE	2001:7f8:21:11::/64
+PIPE Networks Brisbane	PIPE Networks Brisbane	BRISBANE	AU	218.100.0.0/24
+PIPE Networks Canberra	PIPE Networks Canberra	CANBERRA	AU	218.100.19.0/24
+PIPE Networks Hobart	PIPE Networks Hobart	HOBART	AU	218.100.12.0/24
+PIPE Networks Melbourne	PIPE Networks Melbourne	MELBOURNE	AU	218.100.13.0/24
+PIPE Networks Sydney	Pipe Networks MLPA Sydney	Sydney, NSW	AU	218.100.2.0/24
+XchangePoint London	XchangePoint Europe	London	UK	217.79.160.0/23
+CoreSite - Any2 California	CoreSite - Any2 California	Los Angeles and Silicon Valley	US	206.223.143.0/24
+NIX CZ	Neutral Internet Exchange	Prague	CZ	2001:7f8:14::/64
+BBIX Tokyo	BroadBand Internet eXchange Tokyo	Tokyo	JP	218.100.6.0/24
+Terremark NAP de las Madrid	Terremark NAP de las Madrid	Madrid	ES	193.227.132.0/24
+GIX Gothenburg	Gothenburg Internet Exchange	Gothenburg	SE	194.165.32.0/24
+GEIX	Gigabit European Internet Exchange	Paris, London, Amsterdam, Frankfort	FR	80.67.163.0/24
+BigApe	The Big Apple Peering Exchange	New York	US	2001:0458:0026:2::/64
+BigApe	The Big Apple Peering Exchange	New York	US	198.32.238.0/24
+NL-IX	Netherlands Internet Exchange	Amsterdam	NL	2001:7F8:13::/64
+NL-IX	Netherlands Internet Exchange	Amsterdam	NL	194.246.39.224/27
+LONAP	London Network Access Point	London	UK	2001:7f8:17::/48
+IXNM	Internet Exchange New Mexico	New Mexico	US	208.50.192.0/24
+BAYANTEL	Bayan Telecommunications Internet and Gaming Exchange	Quezon City	PH	202.78.121.0/24
+SFMIX	San Francisco Metropolitan Internet Exchange	San Francisco	US	206.197.187.0/24
+NWAX	Northwest Access Exchange, Inc.	Portland, Oregon	US	198.32.195.0/24
+MerieX	Meridian Gate Internet Exchange	London	UK	195.60.84.128/25
+VIX	Vienna Internet Exchange	Vienna	AT	2001:7F8:30::/64
+OCIX Duesseldorf	OpenCarrier e.G. Member IX Duesseldorf 	Duesseldorf	DE	194.54.92.0/25
+STHIX	Stockholm Internet eXchange	Stockholm	SE	192.121.80.0/24
+UA-IX	Ukranian Internet Exchange	Kiev	UA	195.35.65.0/24
+Equinix New York	Equinix Internet Exchange New York	New York	US	2001:504:f::/64
+Equinix Vienna, VA	Equinix Internet Exchange Vienna, VA	Vienna	US	2001:504:e::/64
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	194.68.128.0/24
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	195.69.119.0/24
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	2001:7f8:d:ff::/64
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	2001:7f8:d:fc::/64
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	2001:7f8:d:fe::/64
+NetNod Stockholm	Netnod Internet Exchange i Sverige AB	Stockholm	SE	2001:7f8:d:fb::/64
+KleyReX	KleyReX	Frankfurt	DE	193.189.82.0/23
+KleyReX	KleyReX	Frankfurt	DE	2001:7f8:33::/48
+Equinix Dallas	Equinix Dallas Exchange	Dallas	US	2001:504:0:5::/64
+Equinix San Jose	Equinix San Jose / Bay Area Exchange	San Jose	US	2001:504:0:1::/64
+Equinix Ashburn	Equinix Ashburn Exchange	Ashburn	US	2001:504:0:2::/64
+Equinix Los Angeles	Equinix Los Angeles Exchange	Los Angeles	US	2001:504:0:3::/64
+Equinix Chicago	Equinix Chicago Exchange	Chicago	US	2001:504:0:4::/64
+CoreSite - Any2 California	CoreSite - Any2 California	Los Angeles and Silicon Valley	US	2001:0504:0013::/64
+NaMeX	Nautilus Mediterranean Exchange Point	Rome	IT	193.201.28.0/25
+NaMeX	Nautilus Mediterranean Exchange Point	Rome	IT	193.201.29.0/25
+LONAP	London Network Access Point	London	UK	195.35.120.0/24
+LINX Juniper LAN	London Internet Exchange Ltd.	London	UK	195.66.230.0/26
+DE-CIX Hamburg	DE-CIX, the Hamburg Internet Exchange	Hamburg	DE	80.81.203.0/24
+PhibIX	PhibIX Gix & Nap	Saint-Etienne	FR	78.41.189.128/26
+ENLIX	Enlightened Internet Exchange	Manchester	UK	193.189.130.0/24
+S-IX	Stuttgarter Internet eXchange	Stuttgart	DE	193.138.31.0/24
+ECIX Berlin	European Commercial Exchange Berlin	Berlin	DE	194.9.117.0/24
+Telx Atlanta	TIE:Atlanta, Atlanta Internet Exchange, AtlantaIX	Atlanta	US	2001:478:132::/64
+Equinix Singapore	Equinix Singapore Exchange	Singapore	SG	202.79.197.0/24
+CoreSite - Any2 Chicago	CoreSite - Any2 Chicago	Chicago	US	206.51.43.0/24
+CoreSite - Any2 Chicago	CoreSite - Any2 Chicago	Chicago	US	2001:504:13:4:0:0:0:0/64
+Equinix Paris	Equinix Internet Exchange Paris	Paris	FR	195.42.144.0/23
+Telx Phoenix	TIE:Phoenix, Telx Internet Exchange Phoenix	Phoenix	US	198.32.186.0/24
+Telx Phoenix	TIE:Phoenix, Telx Internet Exchange Phoenix	Phoenix	US	2001:478:186::/64
+MSK-IX	Moscow Internet Exchange	Moscow	RU	2001:7f8:20:101::/64
+MSK-IX	Moscow Internet Exchange	Moscow	RU	193.232.246.0/23
+MEIX	GPX Cairo	Cairo	EG	196.223.7.0/24
+NOTA	NAP Of The Americas	Miami	US	2001:478:124::/48
+Terremark - NAP do Brasil	Terremark - NAP do Brasil	Sao Paulo	BR	200.136.34.0/24
+DE-CIX Munich	DE-CIX, the Munich Internet Exchange	Munich	DE	80.81.202.0/24
+ACTIX	ACT Internet Exchange	Canberra, ACT	AU	218.100.59.0/24
+ACTIX	ACT Internet Exchange	Canberra, ACT	AU	DE8:9::/64
+SIX	Seattle Internet Exchange	Seattle	US	206.81.82.0/23
+OCIX	Open Caribbean Internet eXchange	Philipsburg	SX	200.0.22.0/23
+OCIX	Open Caribbean Internet eXchange	Philipsburg	SX	2001:13c7:6002::/48
+SwissIX	Swiss Internet Exchange	Zurich	CH	2001:7f8:24::/48
+LINX Extreme LAN	London Internet Exchange Ltd.	London	UK	195.66.236.0/22
+Telx Dallas	TIE:Dallas, Telx Internet Exchange Dallas 	Dallas	US	206.126.114.0/24
+Telx Dallas	TIE:Dallas, Telx Internet Exchange Dallas 	Dallas	US	2001:504:17:114::/64
+Telx New York	TIE:New York, Telx Internet Exchange New York	New York	US	206.126.115.0/24
+Telx New York	TIE:New York, Telx Internet Exchange New York	New York	US	2001:504:17:115::/64
+PARIX	NULL	Paris	FR	193.251.216.0/24
+PARIX	NULL	Paris	FR	193.252.127.0/24
+PARIX	NULL	Paris	FR	2001:7F8:2D::/48
+TRDIX	Trondheim Internet eXchange	Trondheim	NO	93.156.93.0/24
+MadIX	Madison Internet Exchange	Madison	US	144.92.233.224/27
+MadIX	Madison Internet Exchange	Madison	US	2607:f388:0:2200::/64
+CINX	Cape Town Internet Exchange	Cape Town	ZA	196.223.22.0/24
+CoreSite - Any2 Boston	CoreSite - Any2 Boston	Boston	US	206.51.42.0/24
+CoreSite - Any2 Boston	CoreSite - Any2 Boston	Boston	US	2001:504:13:7:0:0:0:0/64
+CoreSite - Any2 New York	CoreSite - Any2 New York	New York	US	206.51.45.0/24
+CoreSite - Any2 New York	CoreSite - Any2 New York	New York	US	2001:504:13:6:0:0:0:0/64
+CoreSite - Any2 Miami	CoreSite - Any2 Miami	Miami	US	206.51.44.0/24
+CoreSite - Any2 Miami	CoreSite - Any2 Miami	Miami	US	2001:504:13:5:0:0:0:0/64
+CoreSite - Any2 NorthEast	CoreSite - Any2 NorthEast	DC, Reston, Boston, New York	US	206.51.40.0/24
+CoreSite - Any2 NorthEast	CoreSite - Any2 NorthEast	DC, Reston, Boston, New York	US	2001:504:13:1:0:0:0:0/64
+CoreSite - Any2 Northern California	CoreSite - Any2 Northern California	San Jose, CA	US	206.51.41.0/24
+CoreSite - Any2 Northern California	CoreSite - Any2 Northern California	San Jose, CA	US	2001:504:13:3:0:0:0:0/64
+BIX.BG	Bulgarian Internet eXchange	Sofia	BG	193.169.198.0/23
+HKIX	Hong Kong Internet Exchange	Hong Kong	HK	2001:7FA:0:1::/64
+PIPE Networks Adelaide	PIPE Networks Adelaide	Adelaide	AU	210.100.3.0/24
+TOUIX	Toulouse Internet eXchange	Toulouse	FR	91.213.236.0/24
+DE-CIX Munich	DE-CIX, the Munich Internet Exchange	Munich	DE	2001:7f8:44::/64
+AMS-IX Caribbean	Amsterdam Internet Exchange Caribbean	Curacao	CW	200.0.20.0/24
+NIX2	Norwegian Internet Exchange (location 2)	Oslo	NO	193.156.120.0/24
+PLIX	Polish Internet Exchange	Warsaw/Poland	PL	195.182.218.0/23
+PLIX	Polish Internet Exchange	Warsaw/Poland	PL	2001:7f8:42::/48
+DIX	Danish Internet Exchange	Copenhagen	DK	192.38.7.0/24
+DIX	Danish Internet Exchange	Copenhagen	DK	2001:7F8:1F::/48
+PIX Vancouver	Peer1 Internet Exchange - Vancouver	Vancouver	CA	206.223.127.0/25
+PIX Vancouver	Peer1 Internet Exchange - Vancouver	Vancouver	CA	2001:504:19::/64
+MalmIX Malmo / IXOR	Internet eXchange point of the Oresund Region	Malmö	SE	193.243.183.64/26
+MalmIX Malmo / IXOR	Internet eXchange point of the Oresund Region	Malmö	SE	2001:7f8:53::/48
+Equinix Toronto	Equinix Internet Exchange Toronto	Toronto	CA	198.32.181.0/24
+AAIX	Alpes Adria Internet eXchange	Klagenfurt	AT	193.37.144.0/24
+SOL-IX / SOLIX	Stockholm Open Local Internet Exchange	Stockholm	SE	2001:7f8:21:10::/64
+AAIX	Alpes Adria Internet eXchange	Klagenfurt	AT	2001:7f8:4a::/48
+ECIX Duesseldorf	European Commercial Exchange Duesseldorf	Duesseldorf	DE	2001:7f8:8::/64
+ECIX Berlin	European Commercial Exchange Berlin	Berlin	DE	2001:7f8:8:5::/64
+ECIX Hamburg	European Commercial Exchange Hamburg	Hamburg	DE	193.42.155.0/24
+ECIX Hamburg	European Commercial Exchange Hamburg	Hamburg	DE	2001:7f8:8:10::/64
+DE-CIX Hamburg	DE-CIX, the Hamburg Internet Exchange	Hamburg	DE	2001:7f8:3d::/64
+INEX LAN2	Internet Neutral Exchange Association Ltd.	Dublin	IE	194.88.240.0/25
+INEX LAN2	Internet Neutral Exchange Association Ltd.	Dublin	IE	2001:7f8:18:12::/64
+GR-IX	GReek Internet eXchange	Athens	GR	83.212.8.0/24
+GR-IX	GReek Internet eXchange	Athens	GR	2001:648:2100::/48
+SFINX	Service for French INternet eXchange	Paris	FR	2001:7f8:4e:2::/64
+SFINX	Service for French INternet eXchange	Paris	FR	193.54.79.0/24
+Edge-IX	NULL	UK	UK	2001:7f8:9::/48
+RND-IX	Rostov-on-Don IX	Rostov-on-Don	RU	193.232.140.0/24
+RND-IX	Rostov-on-Don IX	Rostov-on-Don	RU	2001:7F8:20:501::/64
+SMR-IX	Samara IX	Samara	RU	193.232.135.0/24
+SMR-IX	Samara IX	Samara	RU	2001:7F8:20:601::/64
+MD-IX	Internet eXchange Moldova	Chisinau	MD	193.17.78.0/24
+STHIX	Stockholm Internet eXchange	Stockholm	SE	2001:7f8:3e::/48
+KZN-IX	Kazan Internet Exchange	Kazan/Tatarstan	RU	194.190.119.0/24
+KZN-IX	Kazan Internet Exchange	Kazan/Tatarstan	RU	2001:7f8:20:801::/64
+EKT-IX	Ekaterinburg IX	Ekaterinburg	RU	194.85.107.0/24
+EKT-IX	Ekaterinburg IX	Ekaterinburg	RU	2001:7F8:20:301::/64
+SUPRnet	Southern Utah Peering Regional Network	Saint George	US	209.33.201.176/28
+B-IX	Balkan Internet Exchange	Sofia	BG	91.212.235.0/24
+LIX-LV	Latvian Internet Exchange	Riga	LV	62.63.142.0/24
+REUNIX	REUNIX	Saint-Denis, La Reunion	RE	194.57.253.128/27
+LIPTAM	Lietuvos Interneto paslaug&#371; tiek&#279;j&#371; apsikeitimo mazgu	Vilnius	LT	193.219.13.64/26
+TOP-IX	Consorzio Top-IX	Turin	IT	2001:7f8:23:ffff::/64
+TOP-IX	Consorzio Top-IX	Turin	IT	194.116.100.0/24
+KCIX Kansas City	Kansas City Internet eXchange	Kansas City	US	206.51.7.0/25
+KCIX Kansas City	Kansas City Internet eXchange	Kansas City	US	2001:504:1B:1::/64
+France-IX	FranceIX	Paris	FR	37.49.236.0/23
+France-IX	FranceIX	Paris	FR	2001:7f8:54::/64
+MIX-IT	Milano Internet eXchange	Milan	IT	2001:7f8:b:100::/64
+TIX - Tanzania	Tanzania Internet eXchange	Dar es Salaam	TZ	2001:43f8::/64
+TIX - Tanzania	Tanzania Internet eXchange	Dar es Salaam	TZ	196.223.5.0/24
+UIXP	Uganda Internet Exchange Point	Kampala	UG	194.153.153.0/24
+NASA-AIX	NASA Ames Internet eXchange	Mountain View, CA	US	198.9.201.0/24
+NASA-AIX	NASA Ames Internet eXchange	Mountain View, CA	US	198.9.202.0/24
+NASA-AIX	NASA Ames Internet eXchange	Mountain View, CA	US	198.32.136.0/24
+NASA-AIX	NASA Ames Internet eXchange	Mountain View, CA	US	198.32.153.0/24
+NASA-AIX	NASA Ames Internet eXchange	Mountain View, CA	US	2001:478:6663:100::/64
+NASA-AIX	NASA Ames Internet eXchange	Mountain View, CA	US	2001:478:6663:200::/64
+ESPANIX	Espana Internet Exchange	Madrid	ES	2001:7f8:f::/64
+SIX SI	Slovenian Internet Exchange	Ljubljana	SI	91.220.194.0/24
+SIX SI	Slovenian Internet Exchange	Ljubljana	SI	2001:7F8:46::/64
+SGIX	Singapore Internet Exchange	Singapore	SG	103.16.102.0/23
+SGIX	Singapore Internet Exchange	Singapore	SG	2001:de8:12::/56
+GraX	Grazer Internet eXchange	Graz	AT	193.105.214.0/24
+NSK-IX	Novosibirsk Internet Exchange	Novosibirsk/Russia	RU	193.232.87.0/24
+NSK-IX	Novosibirsk Internet Exchange	Novosibirsk/Russia	RU	2001:7f8:20:401::/64
+SOX	Singapore Open Exchange	Singapore	SG	2001:de8:d::/64
+ISTIX / IST-IX	Terremark Istanbul	Istanbul	TR	198.32.120.0/24
+IX Leeds	Leeds Internet Exchange	Leeds / Western Yorkshire	UK	91.217.231.0/24
+CIX	Croatian Internet Exchange	Zagreb	HR	193.192.15.64/26
+CIX	Croatian Internet Exchange	Zagreb	HR	2001:7f8:28::/48
+BIXc	Biznet Internet Exchange	Jakarta	ID	218.100.41.0/24
+Fixo	Free Internet Exchange Oslo	Oslo	NO	91.198.176.0/24
+Fixo	Free Internet Exchange Oslo	Oslo	NO	2001:7f8:41::/48
+OpenIXP / NiCE	National Inter Connection Exchange (NiCE)	Indonesia	ID	218.100.27.0/24
+OpenIXP / NiCE	National Inter Connection Exchange (NiCE)	Indonesia	ID	2001:7fa:f::/48
+GU-IX	Guam Internet Exchange	Guam	US	202.128.12.0/26
+INXS	Internet Exchange Service	Munich	DE	2001:7f8:2c:1000::/64
+Equinix Atlanta	Equinix Internet Exchange Atlanta	Atlanta	US	2001:504:10::/64
+Equinix Seattle	Equinix Internet Exchange Seattle	Seattle	US	2001:504:12::/64
+NWAX	Northwest Access Exchange, Inc.	Portland, Oregon	US	2001:478:195::/64
+Equinix Hong Kong	Equinix Hong Kong	Hong Kong	HK	119.27.63.0/24
+PTT-AME	PTT Americana	Americana/SP	BR	187.16.193.0/24
+PTT-AME	PTT Americana	Americana/SP	BR	2001:12f8:0:16::/64
+MCIX - Matrix Networks	Matrix Cable Internet eXchange	Jakarta	ID	119.110.115.0/24
+MCIX - Matrix Networks	Matrix Cable Internet eXchange	Jakarta	ID	119.110.116.0/23
+MCIX - Matrix Networks	Matrix Cable Internet eXchange	Jakarta	ID	119.110.118.0/24
+MCIX - Matrix Networks	Matrix Cable Internet eXchange	Jakarta	ID	2404:c000:4004::/64
+Lviv-IX	Lviv Internet Exchange Point	Lviv	UA	91.192.104.0/24
+CBIX	Commercial Brno Internet Exchange	Brno	CZ	195.60.89.0/24
+CBIX	Commercial Brno Internet Exchange	Brno	CZ	2001:7f8:5e::/64
+COPHIX	Copenhagen Internet eXchange	Copenhagen	DK	194.117.52.128/25
+COPHIX	Copenhagen Internet eXchange	Copenhagen	DK	2001:7f8:5c::/64
+Equinix Sydney	Equinix Sydney Exchange	Sydney	AU	2001:DE8:6::/64
+Equinix Hong Kong	Equinix Hong Kong	Hong Kong	HK	2001:DE8:7::/64
+Equinix Singapore	Equinix Singapore Exchange	Singapore	SG	2001:DE8:4::/64
+Equinix Tokyo	Equinix Tokyo	Tokyo	JP	203.190.230.0/24
+Equinix Tokyo	Equinix Tokyo	Tokyo	JP	2001:DE8:5::/64
+MyIX	Malaysia Internet Exchange	Kuala Lumpur	MY	218.100.44.0/24
+MyIX	Malaysia Internet Exchange	Kuala Lumpur	MY	2001:de8:10::/112
+IXPN Lagos	Internet Exchange Point of Nigeria	Lagos	NG	196.216.148.0/24
+AZIX	Arizona Internet Exchange	Phoenix, Arizona	US	206.223.120.0/24
+AZIX	Arizona Internet Exchange	Phoenix, Arizona	US	2001:504:18::/48
+FICIX	Finnish Communication and Internet Exchange	Helsinki	FI	2001:7f8:7::/112
+SUPRnet	Southern Utah Peering Regional Network	Saint George	US	2604:2c00:ffff:fff0::/64
+GIX Gdansk	Gdansk Internet eXchange	Gdansk	PL	188.116.45.0/24
+AMS-IX	Amsterdam Internet Exchange	Amsterdam	NL	2001:7f8:1::/64
+GTIIX	Greater Toronto International Internet Exchange	Toronto	CA	2001:504:21::/64
+GTIIX	Greater Toronto International Internet Exchange	Toronto	CA	206.123.0.0/24
+PIRIX	Pirix Internet Exchange	St.Petersburg	RU	193.28.6.0/24
+IX Australia VIC	Victorian Internet Exchange (VIC-IX)	Melbourne/Victoria	AU	218.100.78.0/24
+IX Australia VIC	Victorian Internet Exchange (VIC-IX)	Melbourne/Victoria	AU	2001:7fa:11:1::/64
+COIX	Central Oregon Internet eXchange	Bend Oregon	US	206.197.131.0/24
+TorIX	Toronto Internet Exchange Community	Toronto	CA	206.108.34.0/23
+TorIX	Toronto Internet Exchange Community	Toronto	CA	2001:504:1a:0:0:34::/111
+CePIX.pl	Central Polish Internet eXchange	Mogilno	PL	193.8.61.192/26
+LINX Juniper LAN	London Internet Exchange Ltd.	London	UK	2001:7f8:4:0::/64
+LINX Extreme LAN	London Internet Exchange Ltd.	London	UK	2001:7f8:4:1::/64
+BCIX	Berlin Commercial Internet Exchange	Berlin	DE	2001:7f8:19::/48
+JINX	Johannesburg Internet Exchange	Johannesburg	ZA	196.223.15.0/24
+JINX	Johannesburg Internet Exchange	Johannesburg	ZA	2001:43f8:01f0:1::/64
+CINX	Cape Town Internet Exchange	Cape Town	ZA	2001:43f8:01f1:0::/64
+CINX	Cape Town Internet Exchange	Cape Town	ZA	196.223.23.0/24
+CINX	Cape Town Internet Exchange	Cape Town	ZA	2001:43f8:01f1:1::/64
+MOZIX	Mozambique Internet Exchange	Maputo	MZ	192.168.10.0/24
+Content-IX	GlobalConnect Content-IX	Copenhagen	DK	193.105.116.0/24
+PTT-SP	PTT Sao Paulo	Sao Paulo/SP	BR	187.16.216.0/22
+MICE	Midwest Internet Cooperative Exchange	Minneapolis, MN	US	206.108.255.0/24
+MICE	Midwest Internet Cooperative Exchange	Minneapolis, MN	US	2001:504:27::/64
+MKE-IX	The Milwaukee IX	Milwaukee	US	204.107.122.0/25
+MKE-IX	The Milwaukee IX	Milwaukee	US	2001:19e0:ffff::/64
+MSK-IX	Moscow Internet Exchange	Moscow	RU	2001:7f8:20:102::/64
+Rheintal IX	Rheintal IX Internet Exchange	LI / CH / AT	LI	91.232.229.0/24
+Rheintal IX	Rheintal IX Internet Exchange	LI / CH / AT	LI	2001:7f8:66::/64
+DRF IX	DRFortress Exchange	Honolulu	US	206.197.210.0/24
+CoreSite - Any2 Denver 	CoreSite - Any2 Denver / Formerly RMIX	Denver	US	206.51.46.0/24
+Thinx	Thinx Poland	Poland	PL	212.91.0.0/22
+Thinx	Thinx Poland	Poland	PL	2001:7f8:60::/48
+JXIX	Jacksonville Internet Exchange	Jacksonville	US	206.123.7.0/24
+JXIX	Jacksonville Internet Exchange	Jacksonville	US	206.123.7.0/24
+JPIX	Japan Internet Exchange	Tokyo	JP	2001:de8:8::/64
+JPIX OSAKA	Japan Internet Exchange Osaka	Osaka	JP	103.246.232.0/24
+Equinix Toronto	Equinix Internet Exchange Toronto	Toronto	CA	2001:504:D:80::/64
+Boston Internet Exchange	Markley Boston Internet Exchange	Boston/Massachusetts	US	206.108.236.0/24
+PNIX	Palmerston North Internet Exchange	Palmerston North	NZ	218.100.21.0/24
+CHIX-NZ	Christchurch Internet Exchange	Christchurch	NZ	218.100.24.0/24
+APE	Auckland Peering Exchange	Auckland	NZ	192.203.154.0/24
+APE	Auckland Peering Exchange	Auckland	NZ	2001:7fa:4:c0cb::/64
+WIX-NZ	Wellington Internet Exchange	Wellington	NZ	202.7.0.0/23
+WIX-NZ	Wellington Internet Exchange	Wellington	NZ	2001:7fa:3:ca07::/64
+ESPANIX	Espana Internet Exchange	Madrid	ES	193.149.1.128/25
+ESPANIX	Espana Internet Exchange	Madrid	ES	2001:7F8:f:1::/64
+HIX Haiti	Haiti Internet Exchange	Port-au-Prince	HT	200.0.18.0/24
+MIX	Mongolian Internet Exchange	Ulaanbaatar	MN	218.100.84.0/24
+TPIX	TPIX	Warsaw	PL	2001:7f8:27::/48
+TPIX	TPIX	Warsaw	PL	195.149.232.0/23
+Equinix Paris	Equinix Internet Exchange Paris	Paris	FR	2001:7F8:43::/64
+CoreSite - Any2 Denver 	CoreSite - Any2 Denver / Formerly RMIX	Denver	US	2605:6C00:303:303::/64
+FR-IX	FR-IX	Paris	FR	91.216.67.0/24
+FR-IX	FR-IX	Paris	FR	2001:7f8:59:0:75::/96
+BBIX Tokyo	BroadBand Internet eXchange Tokyo	Tokyo	JP	2001:0DE8:000C::/64
+NYIIX	New York International Internet eXchange	New York	US	206.51.30.0/24
+NYIIX	New York International Internet eXchange	New York	US	2001:504:1:0::/64
+NYIIX	New York International Internet eXchange	New York	US	2001:504:1:9::/64
+Equinix Miami	Equinix Internet Exchange Miami	Miami	US	198.32.114.0/24
+Equinix Miami	Equinix Internet Exchange Miami	Miami	US	2001:504:0:6::/64
+iAIX	iAdvantage Internet Exchange	Hong Kong	HK	2403:2400:1100::/64
+MIX-IT	Milano Internet eXchange	Milan	IT	217.29.68.0/23
+MIX-IT	Milano Internet eXchange	Milan	IT	2001:7f8:b:101::/64
+SOX d.o.o. Serbia	Serbian Open eXchange	Belgrade/Serbia	RS	193.105.163.0/24
+TP-IX	Twin Ports Internet Exchange	Duluth	US	206.223.125.0/25
+TP-IX	Twin Ports Internet Exchange	Duluth	US	206.223.125.128/25
+TP-IX	Twin Ports Internet Exchange	Duluth	US	2001:504:29::/64
+Equinix Ashburn	Equinix Ashburn Exchange	Ashburn	US	206.126.236.0/22
+RDC-IX Kinshasa	Kinix	Kinshasa	CD	196.223.28.0/24
+RDC-IX Kinshasa	Kinix	Kinshasa	CD	2001:43f8:03c0::/48
+CIXP	CERN Internet eXchange Point	Geneva	CH	192.65.185.0/24
+CIXP	CERN Internet eXchange Point	Geneva	CH	2001:7F8:1C:24A::/64
+UAE-IX	UAE Internet Exchange	Dubai, UAE	AE	185.1.8.0/24
+UAE-IX	UAE Internet Exchange	Dubai, UAE	AE	2001:7f8:73::/64
+BiX	Budapest Internet Exchange	Budapest	HU	2001:7f8:35::/64
+GCIIX	Greater Chicago International Internet Exchange	Chicago	US	206.123.30.0/24
+GCIIX	Greater Chicago International Internet Exchange	Chicago	US	2001:504:22:30::/64
+GigaPix	GIGAbit Portuguese Internet eXchange	Lisbon	PT	2001:7f8:a:1::/64
+MD-IX	Internet eXchange Moldova	Chisinau	MD	2001:7f8:6a::/64
+Phoenix IX	Phoenix IX	Phoenix	US	208.157.218.0/24
+Phoenix IX	Phoenix IX	Phoenix	US	2607:f8b8:fff1:6566::/64
+IXManchester	IXManchester powered by LINX	Manchester	UK	195.66.244.0/24
+IXManchester	IXManchester powered by LINX	Manchester	UK	2001:7F8:4:2::/64
+AMS-IX Hong Kong	Amsterdam Internet Exchange Hong Kong	Hong Kong	HK	103.247.139.0/25
+AMS-IX Hong Kong	Amsterdam Internet Exchange Hong Kong	Hong Kong	HK	2001:df0:296::/64
+CATNIX	Catalunya Neutral Internet Exchange	Barcelona	ES	2001:7f8:2a::/64
+WE-Peer	WE Peer Netherlands	The Netherlands	NL	92.240.144.0/24
+IX Australia SA	South Australian Internet Exchange (SA-IX)	Adelaide/SA	AU	218.100.54.0/25
+IX Australia SA	South Australian Internet Exchange (SA-IX)	Adelaide/SA	AU	2001:7fa:11:3::/64
+ECIX Amsterdam	European Commercial Internet Exchange Amsterdam	Amsterdam	NL	62.69.144.0/23
+ECIX Amsterdam	European Commercial Internet Exchange Amsterdam	Amsterdam	NL	2001:7f8:8:15::/64
+ECIX Frankfurt	European Commercial Internet Exchange Frankfurt	Frankfurt	DE	62.69.146.0/23
+ECIX Frankfurt	European Commercial Internet Exchange Frankfurt	Frankfurt	DE	2001:7f8:8:20::/64
+AMS-IX Caribbean	Amsterdam Internet Exchange Caribbean	Curacao	CW	2001:13c7:6004::/64
+CAIX	Cairo Internet eXchange	Cairo	EG	2001:4300:96::/64
+CAIX	Cairo Internet eXchange	Cairo	EG	81.21.96.0/24
+R_ix	Rotterdam Internet Exchange	Rotterdam	NL	91.194.218.0/24
+CNIX	Cork Neutral Internet Exchange	Cork	IE	91.213.73.0/24
+Lyonix	Lyonix, the Lyon IX	Lyon	FR	2001:7f8:47:47::/64
+NetIX	NetIX Communications Ltd.	Sofia	BG	193.218.0.0/24
+NetIX	NetIX Communications Ltd.	Sofia	BG	2001:67c:29f0::/64
+MBIX	Manitoba Internet Echange	Winnipeg, Manitoba	CA	206.72.208.0/24
+YAR-IX	Yaroslavl Internet Exchange	Yaroslavl	RU	91.203.127.0/24
+YAR-IX	Yaroslavl Internet Exchange	Yaroslavl	RU	2001:7f8:77::0/64
+PTT-MG	PTT Belo Horizonte	Belo Horizonte/MG	BR	200.219.139.0/24
+PTT-MG	PTT Belo Horizonte	Belo Horizonte/MG	BR	2001:12f8:0:3::/64
+PTT-DF	PTT Brasilia	Brasilia/DF	BR	200.192.110.0/24
+PTT-DF	PTT Brasilia	Brasilia/DF	BR	2001:12f8:0:13::/64
+PTT-CPV	PTT Campina Grande	Campina Grande/PB	BR	200.192.109.0/24
+PTT-CPV	PTT Campina Grande	Campina Grande/PB	BR	2001:12f8:0:12::/64
+PTT-CAS	PTT Campinas	Campinas/SP	BR	200.192.108.0/24
+PTT-CAS	PTT Campinas	Campinas/SP	BR	2001:12f8:0:11::/64
+PTT-CXJ	PTT Caxias do Sul	Caxias do Sul/RS	BR	187.16.197.0/24
+PTT-CXJ	PTT Caxias do Sul	Caxias do Sul/RS	BR	2001:12f8:0:20::/64
+PTT-PR	PTT Curitiba	Curitiba/PR	BR	200.219.140.0/24
+PTT-PR	PTT Curitiba	Curitiba/PR	BR	2001:12f8:0:4::/64
+PTT-SC	PTT Florianopolis	Florianopolis/SC	BR	200.219.141.0/24
+PTT-SC	PTT Florianopolis	Florianopolis/SC	BR	2001:12f8:0:5::/64
+PTT-GYN	PTT Goiania	Goiania/GO	BR	200.192.111.0/24
+PTT-GYN	PTT Goiania	Goiania/GO	BR	2001:12f8:0:14::/64
+PTT-LDA	PTT Londrina	Londrina/PR	BR	200.219.144.0/24
+PTT-LDA	PTT Londrina	Londrina/PR	BR	2001:12f8:0:7::/64
+PTT-MAO	PTT Manaus	Manaus/AM	BR	187.16.198.0/24
+PTT-MAO	PTT Manaus	Manaus/AM	BR	2001:12f8:0:21::/64
+PTT-NAT	PTT Natal	Natal/RN	BR	187.16.196.0/24
+PTT-NAT	PTT Natal	Natal/RN	BR	2001:12f8:0:19::/64
+PTT-RS	PTT Porto Alegre	Porto Alegre/RS	BR	200.219.143.0/24
+PTT-RS	PTT Porto Alegre	Porto Alegre/RS	BR	2001:12f8:0:6::/64
+PTT-PE	PTT Recife	Recife/PE	BR	200.219.147.0/24
+PTT-PE	PTT Recife	Recife/PE	BR	2001:12f8:0:10::/64
+PTT-RJ	PTT Rio de Janeiro	Rio de Janeiro/RJ	BR	200.219.138.0/24
+PTT-RJ	PTT Rio de Janeiro	Rio de Janeiro/RJ	BR	2001:12f8:0:2::/64
+PTT-BA	PTT Salvador	Salvador/BA	BR	200.219.145.0/24
+PTT-BA	PTT Salvador	Salvador/BA	BR	2001:12f8:0:8::/64
+PTT-SJC	PTT Sao Jose dos Campos	Sao Jose dos Campos/SP	BR	187.16.192.0/24
+PTT-SJC	PTT Sao Jose dos Campos	Sao Jose dos Campos/SP	BR	2001:12f8:0:15::/64
+PTT-SJP	PTT Sao Jose do Rio Preto	Sao Jose do Rio Preto/SP	BR	187.16.199.0/24
+PTT-SJP	PTT Sao Jose do Rio Preto	Sao Jose do Rio Preto/SP	BR	2001:12f8:0:22::/64
+PTT-SP	PTT Sao Paulo	Sao Paulo/SP	BR	2001:12f8::/64
+PTT-VIX	PTT Vitoria	Vitoria/ES	BR	187.16.194.0/24
+PTT-VIX	PTT Vitoria	Vitoria/ES	BR	2001:12f8:0:17::/64
+PTT-CE	PTT Fortaleza	Fortaleza/CE	BR	200.219.146.0/24
+PTT-CE	PTT Fortaleza	Fortaleza/CE	BR	2001:12f8:0:9::/64
+PTT-BEL	PTT Belem	Belem/PA	BR	187.16.195.0/24
+PTT-BEL	PTT Belem	Belem/PA	BR	2001:12f8:0:18::/64
+IX Australia NSW	New South Wales Internet Exchange (NSW-IX)	Sydney/NSW	AU	218.100.52.0/24
+IX Australia NSW	New South Wales Internet Exchange (NSW-IX)	Sydney/NSW	AU	2001:7fa:11:4::/64
+IX Australia WA	West Australian Internet Exchange (WAIX)	Perth/WA	AU	2001:7fa:11::/64
+IX Australia QLD	Queensland Internet Exchange (QLD-IX)	Brisbane/Queensland	AU	103.2.116.0/24
+IX Australia QLD	Queensland Internet Exchange (QLD-IX)	Brisbane/Queensland	AU	2001:7fa:11:2::/64
+YYCIX	YYCIX Calgary Internet Exchange	Calgary	CA	206.126.225/24
+YYCIX	YYCIX Calgary Internet Exchange	Calgary	CA	2001:504:2f::/64
+DE-CIX Frankfurt	Deutscher Commercial Internet Exchange	Frankfurt	DE	80.81.199.0/24
+Peering.cz	Peering.cz eXchange	Prague	CZ	91.213.211.0/24
+IXScotland	IXScotland powered by LINX	Scotland	UK	195.66.246.0/24
+DO-IX	Dortmund Internet eXchange	Dortmund	DE	185.1.18.0/24
+DO-IX	Dortmund Internet eXchange	Dortmund	DE	2001:67c:2b9c::/48
+IXScotland	IXScotland powered by LINX	Scotland	UK	2001:7f8:4:3::/64
+WPGIX	Winnipeg Internet Exchange	Winnipeg	CA	206.126.109.0/24
+WPGIX	Winnipeg Internet Exchange	Winnipeg	CA	2001:504:2c::0/116
+SFMIX	San Francisco Metropolitan Internet Exchange	San Francisco	US	2001:504:30::/48
+PHLIX	Philadelphia Internet Exchange	Philadelphia	US	206.126.228.0/24
+PHLIX	Philadelphia Internet Exchange	Philadelphia	US	2001:504:32:0::/64
+PHLIX	Philadelphia Internet Exchange	Philadelphia	US	2001:504:32:1::/64
+PHLIX	Philadelphia Internet Exchange	Philadelphia	US	2001:504:32:2::/64
+PHLIX	Philadelphia Internet Exchange	Philadelphia	US	2001:504:32:3::/64
+OmahaIX	Omaha Internet Exchange	Omaha	US	206.126.235.0/26
+OmahaIX	Omaha Internet Exchange	Omaha	US	2001:504:33::/64
+MegaPort-IX-NSW	NULL	New South Wales	AU	103.26.68.0/24
+MegaPort-IX-NSW	NULL	New South Wales	AU	2001:dea:0:10::/64
+QIX	Quebec Internet Exchange	Montreal	CA	198.179.18.0/24
+LINX NoVA	LINX Northern Virginia	Northern Virginia	US	206.55.196.0/23
+LINX NoVA	LINX Northern Virginia	Northern Virginia	US	2001:504:31::/64
+Sibir-IX	Krasnoyarsk Internet Exchange	Krasnoyarsk	RU	84.22.159.0/24
+QIX	Quebec Internet Exchange	Montreal	CA	2620:1F:4000::/48
+BNIIX	Buffalo Niagara International Internet Exchange	Buffalo	US	206.130.61.0/24
+BNIIX	Buffalo Niagara International Internet Exchange	Buffalo	US	2001:504:20:81::/64
+TPIX-TW	Taipei Internet Exchange 	Taipei/Taiwan	TW	202.163.222.0/23
+DE-CIX New York	DE-CIX, the New York / New Jersey  Internet Exchange	New York / New Jersey	US	206.130.10.0/24
+DE-CIX New York	DE-CIX, the New York / New Jersey  Internet Exchange	New York / New Jersey	US	2001:504:36::/64
+AMS-IX NY	AMS-IX New York	New York	US	206.126.240.0/24
+AMS-IX NY	AMS-IX New York	New York	US	2001:504:34::/64
+AlbertaIX	AlbertaIX	Calgary	CA	206.130.0.0/24
+AlbertaIX	AlbertaIX	Calgary	CA	2001:504:2b::/64
+PIRIX	Pirix Internet Exchange	St.Petersburg	RU	2001:7f8:82::/64
+SLIX	Salt Lake Internet Exchange	Utah	US	204.228.158.0/24
+SLIX	Salt Lake Internet Exchange	Utah	US	2607:fa18:1:f00::/64
+CoreSite - Any2 California	CoreSite - Any2 California	Los Angeles and Silicon Valley	US	206.72.210.0/23

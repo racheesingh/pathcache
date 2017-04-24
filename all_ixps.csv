@@ -1,0 +1,573 @@
+name,subnet
+Equinix Ashburn Exchange,206.126.236.0/22
+Equinix Chicago Exchange,206.223.119.0/24
+Equinix Dallas Exchange,206.223.118.0/24
+Equinix Los Angeles Exchange,206.223.123.0/24
+Equinix San Jose / Bay Area Exchange,206.223.116.0/24
+Equinix Internet Exchange Palo Alto,198.32.177.0/24
+Equinix Internet Exchange Atlanta,198.32.182.0/24
+"Equinix Internet Exchange Vienna, VA",198.32.192.0/24
+Equinix Internet Exchange Seattle,198.32.133.0/24
+Equinix Internet Exchange New York,198.32.119.0/24
+Seattle Internet Exchange (1500 MTU),206.81.80.0/23
+New York International Internet eXchange,206.51.30.0/24
+no_name_found,198.32.187.0/24
+no_name_found,198.32.200.0/24
+NAP Of The Americas,198.32.124.0/23
+London Internet Exchange Ltd.,195.66.224.0/22
+no_name_found,198.32.139.0/24
+West Australian Internet Exchange (WAIX),198.32.212.0/24
+Digital Realty Atlanta Internet Exchange,198.32.132.0/24
+Los Angeles International Internet eXchange,198.32.146.0/24
+Toronto Internet Exchange Community,206.108.34.0/23
+Massachusetts eXchange Point,198.32.178.0/24
+Amsterdam Internet Exchange,80.249.208.0/21
+"Equinix Zurich, formerly TIX",194.42.48.0/25
+Japan Internet Exchange,210.171.224.0/24
+Deutscher Commercial Internet Exchange,80.81.192.0/22
+San Francisco Internet Exchange,198.32.129.0/24
+CERN Internet eXchange Point,192.65.185.0/24
+Service for French INternet eXchange,193.54.79.0/24
+Milan Internet eXchange,217.29.68.0/23
+no_name_found,193.252.127.0/24
+Free NYIIX Alternative,198.32.229.0/24
+Hong Kong Internet Exchange,123.255.88.0/21
+Taiwan Internet Exchange,210.62.255.0/24
+Manila Internet Exchange,202.0.91.0/24
+Internet Neutral Exchange Association Ltd.,193.242.111.0/25
+Vienna Internet Exchange,193.203.0.0/23
+Korean Internet Neutral Exchange,192.145.251.0/24
+London Network Access Point,5.57.80.0/22
+Budapest Internet Exchange,193.188.137.0/24
+Free Belgian Internet Exchange,195.85.203.0/24
+Belgian National Internet eXchange,194.53.172.0/25
+SwissIX Internet Exchange,91.206.52.0/23
+Catalunya Neutral Internet Exchange,193.242.98.0/24
+Espana Internet Exchange Lower LAN,193.149.1.0/25
+Neutral Internet Exchange,194.246.39.224/27
+"Lyonix, the Lyon IX",77.95.71.0/24
+Netnod Internet Exchange i Sverige AB,194.68.123.0/24
+Neutral Internet Exchange in the Czech Republic,91.210.16.0/22
+GIGAbit Portuguese Internet eXchange,193.136.250.0/24
+INXS / ECIX-MUC,194.59.190.0/24
+Deutscher Commercial Internet Exchange Hamburg,80.81.203.0/24
+Groningen Internet Exchange,193.111.172.0/24
+Luxemburg Internet Exchange,193.168.127.0/24
+San Diego NAP,198.17.46.0/24
+Pacific Wave Exchange in Los Angeles and Seattle,207.231.241.0/24
+"Norwegian Internet Exchange, NIX1 (location 1)",193.156.90.0/24
+Slovak Internet Exchange,192.108.148.0/24
+Berlin Commercial Internet Exchange,193.178.185.0/24
+iAdvantage Internet Exchange,210.184.127.0/24
+Madison Internet Exchange,144.92.233.224/27
+European Commercial Internet Exchange Duesseldorf,194.146.118.0/24
+Distributed IX in EDO (former NSPIXP2),202.249.2.0/24
+Singapore Open Exchange,198.32.141.0/24
+Equinix Sydney Exchange,45.127.172.0/22
+Japan Network Access Point Tokyo,210.173.176.0/24
+Warsaw Internet eXchange,195.85.195.0/24
+Auckland Peering Exchange,192.203.154.0/24
+FICIX Helsinki / FICIX2,193.110.224.0/24
+MSK-IX Moscow,195.208.208.0/21
+Pipe Networks MLPA Sydney,218.100.2.0/24
+MSK-IX Saint-Petersburg (former SPB-IX),194.226.102.0/23
+PIPE Networks Brisbane,218.100.0.0/24
+PIPE Networks Melbourne,218.100.13.0/24
+PIPE Networks Adelaide,210.100.3.0/24
+PIPE Networks Canberra,218.100.19.0/24
+PIPE Networks Hobart,218.100.12.0/24
+Consorzio Top-IX,194.116.100.0/24
+NAP do Brasil,198.32.122.0/24
+Nautilus Mediterranean Exchange Point,193.201.29.0/25
+KleyReX Internet Exchange,193.189.82.0/23
+Equinix Hong Kong,119.27.63.0/24
+BroadBand Internet eXchange Tokyo,218.100.6.0/24
+Stockholm Open Local Internet Exchange,193.110.12.0/24
+Johannesburg Internet Exchange,196.223.14.0/24
+CoreSite - Any2 California,206.72.210.0/23
+Internet Multifeed JPNAP Osaka,210.173.178.0/25
+Gothenburg Internet Exchange,194.165.32.0/24
+The Big Apple Peering Exchange,198.32.238.0/24
+Bayan Telecommunications Internet and Gaming Exchange,202.78.121.0/24
+San Francisco Metropolitan Internet Exchange,206.197.187.0/24
+Equinix Singapore Exchange,27.111.228.0/22
+Meridian Gate Internet Exchange,195.60.84.128/25
+"Northwest Access Exchange, Inc.",198.32.195.0/24
+Equinix Tokyo,203.190.230.0/24
+OpenCarrier eG Member IX Duesseldorf ,194.54.92.0/25
+PTT Sao Paulo,187.16.216.0/21
+Stockholm Internet eXchange,192.121.80.0/24
+PTT Porto Alegre,200.219.143.0/24
+PTT Curitiba,200.219.140.0/24
+PTT Florianopolis,200.219.141.0/24
+PTT Belo Horizonte,200.219.139.0/24
+PTT Rio de Janeiro,200.219.138.0/24
+PTT Brasilia,200.192.110.0/24
+CABASE IXP Buenos Aires,200.0.17.0/24
+Ukranian Internet Exchange,195.35.65.0/24
+Netnod Internet Exchange i Sverige AB,194.68.130.0/24
+Netnod Internet Exchange i Sverige AB,195.69.117.0/24
+Netnod Internet Exchange i Sverige AB,194.68.133.0/24
+Peer1 Internet Exchange - Vancouver,206.223.127.0/25
+National Internet eXchange of India,218.100.48.0/26
+CoreSite - Any2 NorthEast,206.51.40.0/24
+CoreSite - Any2 Miami,206.51.44.0/24
+Enlightened Internet Exchange,193.189.130.0/24
+European Commercial Internet Exchange Berlin,194.9.117.0/24
+JPNAP Tokyo II Service,218.100.45.0/24
+"Stuttgarter Internet eXchange, S-IX",193.138.31.0/24
+MSK-IX Novosibirsk (former NSK-IX),193.232.87.0/24
+CoreSite - Any2 Chicago,206.51.43.0/24
+Reykjavik Internet Exchange,195.130.211.0/26
+Poznan Internet Exchange,185.1.4.0/24
+Internet eXchange point of the Oresund Region,193.243.183.64/26
+Kenya Internet Exchange Point,196.223.21.0/24
+United IX - Chicago,206.41.110.0/24
+Nepal Internet Exchange,198.32.231.0/25
+Deutscher Commercial Internet Exchange Munich,80.81.202.0/24
+Kansas City Internet eXchange,206.51.7.0/25
+Malaysia Internet Exchange,218.100.44.0/24
+IX Ecuador (nap.ec/ix.ec) - Quito,200.1.6.0/24
+CoreSite - Any2 Denver / Formerly RMIX,206.51.46.0/24
+Equinix Internet Exchange Paris,195.42.144.0/23
+Digital Realty Phoenix Internet Exchange,198.32.186.0/24
+Netnod Internet Exchange i Sverige AB,194.68.131.64/26
+Open Caribbean Internet eXchange,200.0.22.0/23
+Polish Internet Exchange,195.182.218.0/23
+DRFortress Exchange,206.197.210.0/24
+Interlan Internet Exchange,86.104.125.0/24
+Cairo Internet eXchange,81.21.96.0/24
+GPX Cairo,196.223.7.0/24
+ACT Internet Exchange,218.100.59.0/24
+European Commercial Internet Exchange Hamburg,193.42.155.0/24
+Norwegian Internet Exchange (location 2),193.156.120.0/24
+Neutral Internet eXchange Slovakia,194.30.187.0/24
+Croatian Internet Exchange,193.192.15.64/26
+Rotterdam Internet Exchange,91.194.218.0/24
+PTT Londrina,200.219.144.0/24
+Slovenian Internet Exchange,91.220.194.0/24
+London Internet Exchange Ltd.,195.66.236.0/22
+Digital Realty Dallas Internet Exchange,206.126.114.0/24
+Digital Realty New York Internet Exchange,206.126.115.0/24
+Balkan Internet Exchange,185.1.30.0/24
+Tampere Region Exchange,195.140.192.0/24
+Bulgarian Internet eXchange,193.169.198.0/23
+CoreSite - Any2 New York,206.51.45.0/24
+CoreSite - Any2 Boston,206.51.42.0/24
+Toulouse Internet eXchange,91.213.236.0/24
+CoreSite - Any2 Northern California,206.51.41.0/24
+Trondheim Internet eXchange,93.156.93.0/24
+Cape Town Internet Exchange,196.223.22.0/24
+GReek Internet eXchange,176.126.38.0/25
+Wellington Internet Exchange,202.7.0.0/23
+Christchurch Internet Exchange,218.100.24.0/24
+MSK-IX Ekaterinburg (former EKT-IX),194.85.107.0/24
+Quebec Internet Exchange (QIX),198.179.18.0/24
+"Peering, LTD",178.18.224.0/22
+FranceIX,37.49.236.0/23
+Tanzania Internet eXchange,196.223.5.0/24
+Southern Utah Peering Regional Network,209.33.201.176/28
+Santa Monica Internet Local Exchange,195.246.227.0/24
+Amsterdam Internet Exchange Caribbean,200.0.20.0/24
+BALCAN-IX,80.97.248.0/23
+Equinix Internet Exchange Toronto,198.32.181.0/24
+National Inter Connection Exchange (NiCE),218.100.27.0/24
+Alpes Adria Internet eXchange,193.37.144.0/24
+MSK-IX Vladivostok (former VLV-IX),193.232.136.0/24
+MSK-IX Samara (former SMR-IX),193.232.135.0/24
+MSK-IX Rostov-on-Don (former RND-IX),193.232.140.0/24
+REUNIX,194.57.253.128/27
+Latvian Internet Exchange,62.63.142.0/24
+Internet Neutral Exchange Association Ltd.,194.88.240.0/25
+Internet eXchange Moldova,193.17.78.0/24
+MSK-IX Kazan (former KZN-IX),194.190.119.0/24
+Lietuvos Interneto paslaugų tiekėjų apsikeitimo mazgu,193.219.13.64/26
+FR-IX,91.216.67.0/24
+PTT Campinas,200.192.108.0/24
+Uganda Internet Exchange Point,196.223.25.0/25
+Serbian Open eXchange,193.105.163.0/24
+NASA Ames Internet eXchange,198.32.153.0/24
+Singapore Internet Exchange,103.16.102.0/23
+Grazer Internet eXchange,193.105.214.0/24
+Leeds Internet Exchange,91.217.231.0/24
+Midwest Internet Cooperative Exchange,206.108.255.0/24
+Biznet Internet Exchange,218.100.41.0/24
+Free Internet Exchange Oslo,91.198.176.0/24
+Copenhagen Internet eXchange,194.117.52.128/25
+Guam Internet Exchange,202.128.12.0/26
+Matrix Cable Internet eXchange,119.110.118.0/24
+EPIX,91.212.9.0/24
+Lviv Internet Exchange Point,91.192.104.0/24
+Arizona Internet Exchange,206.223.120.0/24
+Commercial Brno Internet Exchange,195.60.89.0/24
+Thinx Poland,212.91.0.0/22
+TPIX,195.149.232.0/23
+Internet Exchange Point of Nigeria,196.216.148.0/24
+Stowarzyszenie na Rzecz Rozwoju Spoleczenstwa Informacyjnego e-Poludnie,195.191.170.0/23
+FICIX Oulu / FICIX3,193.110.225.0/24
+Buffalo Niagara International Internet Exchange,206.130.61.0/24
+Gdansk Internet eXchange,188.116.45.0/24
+The Milwaukee IX,204.107.122.0/25
+Greater Toronto International Internet Exchange,206.123.0.0/24
+Pirix Internet Exchange,193.28.6.0/24
+Victorian Internet Exchange (VIC-IX),218.100.78.0/24
+Central Oregon Internet eXchange,206.197.131.0/24
+Central Polish Internet eXchange,193.8.61.192/26
+Mozambique Internet Exchange,192.168.10.0/24
+Krasnoyarsk Internet Exchange,217.117.187.0/24
+GlobalConnect Content-IX,193.105.116.0/24
+Rheintal IX Internet Exchange,91.232.229.0/24
+PTT Salvador,200.219.145.0/24
+PTT Caxias do Sul,187.16.197.0/24
+Slovak Internet Exchange Košice,192.108.145.0/24
+Jacksonville Internet Exchange,206.123.7.0/24
+Japan Internet Exchange Osaka,103.246.232.0/24
+Boston Internet Exchange,206.108.236.0/24
+Palmerston North Internet Exchange,218.100.21.0/24
+Haiti Internet Exchange,200.0.18.0/24
+PTT Goiania,200.192.111.0/24
+Queensland Internet Exchange (QLD-IX),218.100.76.0/24
+Amsterdam Internet Exchange Hong Kong,103.247.139.0/25
+MSK-IX Stavropol (former STW-IX),194.85.177.0/24
+IXManchester powered by LINX,195.66.244.0/24
+UAE-IX powered by DE-CIX,185.1.8.0/24
+NAPAfrica IX Johannesburg,196.46.25.0/24
+Equinix Internet Exchange Miami,198.32.114.0/24
+NAPAfrica IX Cape Town,196.10.140.0/24
+IX.br (PTT.br) Campina Grande,200.192.109.0/24
+Durban Internet Exchange,196.223.30.0/24
+Twin Ports Internet Exchange,206.223.125.128/25
+Kinix,196.223.28.0/24
+PTT Sao Jose dos Campos,187.16.192.0/24
+YYCIX Calgary Internet Exchange,206.126.225.0/24
+Greater Chicago International Internet Exchange,206.123.30.0/24
+Giganet Internet exchange network,185.1.62.0/23
+Phoenix IX,206.41.105.0/24
+CyrusOne Internet Exchange,198.32.130.0/24
+CyrusOne Internet Exchange,198.32.96.0/23
+European Commercial Internet Exchange Frankfurt,62.69.146.0/23
+Yaroslavl Internet Exchange,91.203.127.0/24
+South Australian Internet Exchange (SA-IX),218.100.54.0/25
+Ghana Internet Exchange Association,196.201.2.0/24
+NetIX Communications Ltd.,193.218.0.0/24
+Manitoba Internet Echange,206.72.208.0/24
+PTT Recife,200.219.147.0/24
+PTT Vitoria,187.16.194.0/24
+PTT Manaus,187.16.198.0/24
+PTT Natal,187.16.196.0/24
+PTT Sao Jose do Rio Preto,187.16.199.0/24
+PTT Fortaleza,200.219.146.0/24
+PTT Belem,187.16.195.0/24
+Peering.cz eXchange,91.213.211.0/24
+New South Wales Internet Exchange (NSW-IX),218.100.52.0/24
+IXScotland powered by LINX,195.66.246.0/24
+CyrusOne Internet Exchange,198.32.98.0/24
+Dortmund Internet eXchange,185.1.18.0/24
+Winnipeg Internet Exchange,206.126.109.0/24
+LINX Northern Virginia,206.55.196.0/23
+Megaport MegaIX Melbourne,103.26.71.0/24
+Megaport MegaIX Sydney,103.26.68.0/23
+Megaport MegaIX Brisbane,103.26.70.0/24
+BREM-IX,185.1.35.0/24
+"DE-CIX, the New York / New Jersey  Internet Exchange",206.130.10.0/24
+AMS-IX New York,206.126.240.0/24
+Omaha Internet Exchange,206.126.235.0/26
+Krasnoyarsk Internet Exchange,84.22.159.0/24
+Taipei Internet Exchange,203.163.222.0/24
+Salt Lake Internet Exchange,204.228.158.0/24
+Mumbai IX (Mumbai CH) India's Largest Peering Internet Exchange Hub,103.27.170.0/32
+Tampa Internet Exchange,206.108.114.0/24
+Vancouver internet Exchange,206.41.104.0/24
+Brno University of Technology,185.1.25.0/24
+SMARTHUB Internet Exchange,185.1.15.0/24
+OpenCarrier eG Member-IX Frankfurt,194.54.93.0/25
+no_name_found,185.1.13.0/24
+FranceIX Marseille,37.49.232.0/24
+CABASE NAP La Plata,200.115.81.0/24
+BroadBand Internet eXchange Singapore,103.231.152.0/22
+CABASE IXP Posadas,200.115.83.0/24
+CABASE IXP Neuquén,200.0.19.0/24
+AMS-IX Bay Area,206.41.106.0/24
+Tahoe Internet Exchange,206.41.109.0/24
+AMS-IX Chicago,206.108.115.0/24
+CABASE NAP Rosario,200.13.83.0/24
+Equinix Osaka,203.190.227.0/24
+FL-IX - The South Florida Internet Exchange,206.41.108.0/24
+Miami Internet Exchange,198.78.5.0/24
+Megaport MegaIX Singapore,103.41.12.0/22
+The Djibouti Internet Exchange,196.223.38.0/24
+NAPAfrica IX Durban,196.10.141.0/24
+Vanuatu Internet Exchange,103.25.228.0/24
+Australian Capital Territory,218.100.54.128/25
+Auckland Internet Exchange,43.243.21.0/24
+Megaport MegaIX Auckland,43.243.22.0/23
+Midwest Internet Exchange Indy,206.53.139.0/24
+Detroit Internet Exchange,209.124.52.0/23
+Angola Internet Exchange Point,196.11.234.0/24
+Tirol-IX Internet Exchange,185.1.31.0/24
+BENIN-IX,196.223.40.0/24
+IXP et NAP d’Auvergne et du Massif Central,185.1.2.0/25
+Bangkok Neutral Internet Exchange,203.159.68.0/23
+Equinix Melbourne,183.177.61.0/24
+Rwanda Internet Exchange,196.223.12.0/24
+Megaport MegaIX Hong Kong,103.48.48.0/23
+no_name_found,91.212.235.0/24
+CABASE IXP Bahía Blanca,200.14.37.0/24
+CABASE IXP Córdoba,200.14.75.0/24
+CABASE IXP De La Costa,200.14.39.0/24
+CABASE NAP Mar Del Plata,200.115.82.0/24
+CABASE IXP Mendoza,200.14.38.0/24
+CABASE IXP Puerto Madryn,200.115.84.0/24
+CABASE IXP Santa Fe,200.14.74.0/24
+"Mass IX, Boston/Massachusetts Internet Exchange",206.53.143.0/24
+Global-IX,109.239.136.0/23
+Global Internet Exchange & Peering Network,80.94.94.0/23
+Riau Internet Exchange Point,103.54.2.0/23
+no_name_found,194.254.208.128/27
+Espana Internet Exchange Upper LAN,193.149.1.128/25
+"DE-CIX, the Marseille Internet Exchange",185.1.47.0/24
+United Peering - free and open peering (UP-IXP),185.1.54.0/24
+Neutral Internet Exchange Valencia,213.162.194.0/24
+YEGIX Internet Exchange Community Ltd.,206.53.140.0/24
+Chisinau Internet Exchange,185.1.45.0/24
+CHN-IX Beijing,106.48.34.0/23
+Megaport MegaIX Seattle,206.53.171.0/24
+Megaport MegaIX Los Angeles,206.53.172.0/24
+Megaport MegaIX Bay Area,206.53.169.0/24
+Megaport MegaIX Chicago,206.53.168.0/24
+Megaport MegaIX Ashburn,206.53.170.0/24
+Megaport MegaIX Dallas,206.53.174.0/24
+Symphony Internet Exchange,103.14.9.0/24
+Interconnection eXchange Denver,206.53.175.0/24
+Montgomery Internet Exchange,206.53.200.0/24
+Deutscher Commercial Internet Exchange Dusseldorf,185.1.58.0/24
+CODIX,185.1.23.0/24
+Megaport MegaIX Perth,202.12.243.0/24
+no_name_found,185.1.69.0/24
+WBX MMR2.0 Seattle,206.81.82.0/23
+no_name_found,185.1.2.128/25
+no_name_found,192.38.7.248/32
+Seattle Internet Exchange (9000 MTU),192.38.7.249/32
+Liverpool Internet Exchange,193.110.227.64/27
+no_name_found,185.1.43.0/24
+no_name_found,103.216.40.0/23
+Data Facilities Internet Exchange,196.49.14.0/24
+no_name_found,195.69.119.0/24
+Burkina Faso Internet eXchange,194.68.131.128/26
+Extreme Broadband Services,185.167.180.0/22
+non-commercial Community Exchange,200.115.85.0/24
+FICIX Espoo / FICIX1,138.204.245.0/24
+Madagascar Global Internet eXchange,138.204.244.0/24
+JetPeer IX,200.107.83.0/24
+AUSIX,218.100.1.0/24
+Equinix Sydney,202.167.228.0/24
+VIX,193.203.0.0/24
+BDIX,198.32.167.0/24
+BNIX,194.53.172.0/24
+PTTMetro São Paulo,187.16.216.0/22
+OttIX,198.32.235.0/24
+NAP Chile,192.168.173.0/24
+NAP-Colombia,206.223.124.0/24
+NAP de Cuba,200.0.16.0/24
+DIX,192.38.7.0/24
+LINX,195.66.230.0/24
+XP-London IXP,217.79.160.0/23
+TIX,212.47.215.0/24
+DE-CIX,194.31.232.0/24
+DE-CIX,80.81.200.0/24
+INXS-HH,62.208.162.0/24
+DE-CIX Hamburg,213.238.34.0/24
+INXS,194.112.112.0/24
+N-IX,195.85.217.0/24
+GR-IX,195.130.89.0/24
+RIX,193.4.59.0/24
+NIXI Mumbai,180.179.222.68
+NIXI Delhi,180.179.222.68
+NIXI Chennai,180.179.222.68
+NIXI Kolkotta,180.179.222.68
+IIX,103.28.74.0/23
+IIX,218.100.4.0/24
+INEX,193.1.208.192/26
+IIX,192.114.62.0/24
+MIX,217.29.66.0/24
+NaMeX,193.201.40.0/24
+Equinix Tokyo,203.190.230.0/25
+LGDACOM IX,198.32.209.0/24
+MIXP,196.223.0.0/24
+NPIX,198.32.231.0/24
+AMS-IX,195.69.144.0/24
+AMS-IX,195.69.145.0/24
+AMS-IX,195.69.144.0/22
+AMS-IX,193.148.15.0/24
+NDIX,193.108.98.0/24
+Intered Panamá,200.46.153.8/30
+NAP Perú,206.223.130.0/24
+RoNIX,217.156.113.0/24
+MSK-IX Moscow,193.232.244.0/24
+SIX,193.2.141.0/24
+JINX,198.32.142.0/24
+CATNIX,213.234.0.0/25
+ESPANIX,193.149.0.0/23
+Terremark NAP Madrid,193.227.132.0/24
+Netnod Gothenburg,194.68.135.0/24
+Netnod,195.245.240.0/24
+Netnod,194.68.128.0/24
+Netnod,194.68.132.0/24
+SOLIX,193.110.12.0/23
+SwissIX,194.242.34.0/24
+Equinix Zurich,194.42.48.0/24
+TIX,196.223.5.0/25
+UIXP,196.223.25.0/24
+UIXP,194.153.153.0/25
+Equinix Ashburn,206.223.115.0/24
+Equinix Ashburn,206.223.137.0/24
+Equinix-Atlanta,198.32.183.0/24
+Equinix-Boston,198.32.111.0/24
+Equinix-Boston,198.32.112.0/24
+Equinix-Boston,198.32.113.0/24
+Equinix Chicago IBX,206.223.138.0/24
+STAR TAP,206.220.240.0/24
+StarLight,206.220.241.0/24
+Equinix-Dallas,198.32.116.0/24
+Equinix-Dallas,198.32.115.0/24
+Equinix-Dallas,206.223.125.0/24
+Compaq-NAP,198.32.228.0/24
+Rice EduPOP,206.223.129.0/24
+MadIX,144.92.233.224/28
+Equinix-Miami,198.32.101.0/24
+Equinix-Miami,198.32.99.0/24
+Equinix-Miami,198.32.100.0/24
+MAGPI,198.32.42.0/24
+MAGPI,198.32.224.0/24
+Equinix NY,206.197.169.0/24
+Equinix NY,206.223.131.0/24
+Equinix-NY,198.32.117.0/24
+PHLIX,206.126.228.0/24
+NWAX,198.32.196.0/24
+Equinix-Seattle,198.32.135.0/24
+SIX,198.32.180/24
+Pacific Wave,198.32.170.0/24
+Pacific Wave,198.32.171.0/24
+Equinix IBX Secaucus,206.223.117.0/24
+Texas GigaPOP,198.32.236.0/24
+VNIX,218.100.10.0/24
+VNIX,218.100.14.0/24
+Any2,206.223.143.0/24
+PIPE Adelaide,218.100.3.0/24
+Equinix Singapore,202.79.197.0/24
+Equinix LA,206.223.142.0/24
+Marseille Internet Exchange,85.31.223.0/24
+PhOpenIX,198.32.172.0/24
+BurundiX,196.223.36.0/24
+Zambia IXP,196.223.2.0/24
+TLLIX,195.137.179.0/24
+NL-ix,193.239.116.0/23
+IX.PR,134.202.255.0/24
+DMIX,206.223.126.0/24
+PIX,206.223.127.0/24
+AIXP,198.32.179.192/27
+AIXP,198.32.179.192/27
+AIXP,196.223.6.0/25
+NFX.CZ,81.201.48.192/26
+STHIX,194.50.181.128/25
+FNIX6,195.140.149.128/25
+BeirutIX,198.32.157.0/24
+EuroGIX,185.1.14.0/24
+BSIX,198.32.167.0/24
+DN-IX,193.34.203.0/24
+AO-IXP,196.223.1.0/24
+OD-IX,194.107.117.0/24
+OCIX,200.0.22.0.0/23
+NIXI Bangalore,180.179.222.68
+NIXI Hyderabad,180.179.222.68
+NIXI Ahmedabad,180.179.222.68
+Malawi IXP,172.30.1.0/24
+IXSA Riyadh,91.206.135.0/24
+IXSA Riyadh,91.206.134.0/24
+GulfIX Bahrain,195.82.138.0/23
+CNIX,91.213.73.0/24
+eXchange West,195.60.82.64/26
+NAP VSIX IPv4,95.140.128.0/23
+FVG-IX,82.193.63.0/24
+ULN-IX,185.1.19.0/26
+IST-IX,198.32.120.0/24
+IXLeeds,91.234.18.0/24
+MiNAP,92.60.70.0/24
+LU-CIX,188.93.170.0/23
+DTEL-IX,193.25.180.255/23
+Crimea-IX,193.34.200.0/24
+MCIX,119.110.117.0/24
+HIX,218.100.56.0/24
+MICE,69.147.218.0/24
+LANIC,172.16.96.0/24
+LANIC,172.16.97.0/24
+ZPIX,218.100.85.0/24
+GREX,206.126.224/24
+ASM-IX HK,103.247.139.0/24
+DANIX,10.1.2.0/24
+RTIX,213.184.52.0/24
+VIX,103.25.229.0/24
+Balcan-IX,80.97.248.0/24
+NAP CABASE Bahía Blanca,200.14.37.0 /24
+NAP CABASE De la Costa,200.14.39.0 /24
+NAP CABASE La Plata,200.115.81.0 /24
+NAP CABASE Mar del Plata,200.115.82.0 /24
+NAP CABASE Mendoza,200.14.38.0 /24
+NAP CABASE Rosario,200.13.83.0 /24
+NAP CABASE Santa Fe,200.14.74.0 /24
+TunIXP Tunis,193.95.96.0/24
+TunIXP Tunis,193.95.19.0/24
+TunIXP Tunis,193.95.66.0/24
+TunIXP Tunis,41.231.21.0/24
+TunIXP Tunis,193.95.0.0/24
+TunIXP Tunis,193.95.1.0/24
+Phoenix-IX,208.157.218.0/24
+ARMIX,91.218.4.0/24
+BIX,193.156.125.0/24
+TRDIX,193.156.93.0/24
+FICIX1,193.110.226.0/24
+IX-LAPAZ,200.75.174.0/24
+NEX-IX,218.100.72.0/23
+Open IXP,103.22.232.0/24
+Open IXP,218.100.36.0/24
+Open IXP,103.22.233.0/22
+Giganet,91.245.221.0/24
+France-IX Marseille,37.249.232.0/26
+AlbertaIX,206.130.0.0/24
+LINX NoVa,206.55.196.0.23
+Halifax IXP,206.130.15.0/24
+IXScotland,195.66.246.0/23
+PIX,185.1.1.0/24
+WHKIX,196.223.35.0/24
+PIT Bolivia,179.0.30/24
+COIX,206.197.131.11/24
+CIVIX,196.223.4.0/24
+TTIX,181.188.0.240/28
+TuniXP Enfidha,41.231.34.0/26
+IXP Costa Rica,200.107.83.128/25
+PTT Central Paulista,187.16.200.0/24
+SIXP,196.223.34.0/24
+JAIXP,206.41.107.0/24
+NAP CABASE Posadas,200.115.83.0 /24
+NAP CABASE Puerto Madryn,200.115.84.0 /24
+Benin IX,196.223.40/24
+BFIX,196.13.207.128/26
+Mumbai CH,103.27.170.0/24
+CCIT,201.131.204.0/26
+Sea-IX,91.240.225.0/24
+KM-IX,193.201.116.128/26
+TIE Atlanta,198.32.132.0./24
+TP-IX,206.223.125.0/24
+MGIX,196.223.41.0/24
+IXPN - Abuja,196.216.150/24
+T-CIX,185.1.40.0/24
+RVA-IX,206.53.137.0/24
+LIXP,196.223.44.0/24
+PNG-IXP,202.165.202.187
+DET-IX,209.124.52.0/24
+CNX,103.7.144.0/24
+Mwanza IXP,196.60.0.0/24
+BIXP,10.31.2.0/24
+QIXP,185.154.168.0/23
+MSA-IX,196.60.2.0/24
+LIXP,196.223.24.0/24
